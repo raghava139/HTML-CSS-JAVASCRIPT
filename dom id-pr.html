@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>documentELmentByid</title>
+
+</head>
+<body>
+    debu
+
+ <div id="item">
+     <div id="item1">
+        this is raghava
+     </div>
+     <div id="item2">
+        this is laptop
+     </div>
+     <div>
+         
+        <ul id="names">
+         <li id="colors">html</li>
+         <li id="color1">javascript</li>
+         <li id="color2">css</li>
+         <li id="color3">jquery</li>
+         <li id="color7">bootstrap</li>
+     </ul>
+    </div>
+ </div>
+    <script>     
+     var a = document.getElementById('item')
+    a.style.backgroundColor='red';
+
+    var b= document.getElementById('item1')
+    b.style.color='white';
+   
+    var c=document.getElementById('item2')
+    c.style.fontSize='100px';
+  
+
+    var b=document.getElementById('item1');
+    b.innerHTML="<div>great</div>";
+    b.style.fontSize="70px";
+
+    var sel=document.getElementById('names')
+    sel.style.backgroundColor='green';
+</script>
+   
+</body>
+</html>

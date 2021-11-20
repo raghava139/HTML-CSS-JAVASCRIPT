@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and await</title>
+</head>
+<body>
+    <button id='button'>button</button>
+    <table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>name</th>
+            <th>username</th>
+            <th>email</th>
+            <th>address</th>
+        </tr>
+      </thead> 
+      <tbody id=dyn>
+    
+      </tbody>
+    </table>
+</body>
+<script>
+    //async and await
+   
+    // async
+    // The keyword async before a function makes the function return a promise is called async.
+
+    
+    //await
+    //The keyword await before a function makes the function await for a promise is called await.
+
+
+    //     fetch("http://jsonplaceholder.typicode.com/users")
+// .then(function(e)
+// {
+//      e.json()
+//      .then(function(f)
+//      {
+//         console.log(f)
+//      });
+// })
+// .catch(function(err){
+//     console.log('error is occuring',err);
+// });
+const dataServer= new Promise(function(resolve,reject)
+{
+    fetch("http://jsonplaceholder.typicode.com/users")
+    .then(function(da)
+    {
+        da.json()
+        .then(function(m)
+        {
+            var dyn=document.getElementById('dyn')
+            var nLaptop='';
+            for(var i=0;i<m.length;i++)
+            {
+                nLaptop+='<tr>';
+                nLaptop+='<td>'+m[i].id+'</td>';
+                nLaptop+='<td>'+m[i].name+'</td>';
+                nLaptop+='<td>'+m[i].username+'</td>';
+                nLaptop+='<td>'+m[i].email+'</td>';
+                nLaptop+='<td>'+m[i].address+'</td>';
+                nLaptop+='</tr>';
+            }
+            dyn.innerHTML=nLaptop;
+            
+        });
+     })
+     .catch(()=>console.log('this is error'));
+});
+
+
+class myName
+{
+    constructor(firn,secn,ema)
+    {
+        this.FIrstName=firn;
+        this.secName=secn;
+        this.Email=ema;
+
+    }
+    getTHeMEthod()
+    {
+        return this.firn+this.secn+this.ema;
+    }
+}
+var MyWWW= new myName('laptop','dell',"dell@gmail.com")
+console.log(MyWWW)
+
+
+function* genFunc(i){
+  yield i+3;
+  yield i+4;
+}
+let connect=genFunc(10)
+console.log(connect.next().value)
+console.log(connect.next().value)
+
+
+let SETing=new Set([4,3,5,3])
+console.log(SETing)
+console.log(SETing.add([20,303,30]))
+
+let myWOrl={
+    fnnfn:'rafaj',
+}
+
+let corr=new WeakSet([myWOrl])
+// console.log(corr.fnnfn='raghavendra')
+console.log(corr.has(myWOrl))
+
+
+const Mymap=new Map()
+Mymap.set('a',2)
+Mymap.set('b',3)
+console.log(Mymap)
+
+let myOBject={
+    myworld:"all"
+}
+const myWEakmap=new WeakMap()
+console.log(myWEakmap.set(myOBject,{color:'white'}))
+
+temporal dead zone 
+            function myCorrection(){
+                console.log(hoist)
+                const hoist=10
+            }
+            myCorrection()
+
+
+    myWORl=10
+    console.log(myWORl)
+    let myWORl;
+var x
+x=10
+console.log(x)
+
+</script>
+</html>

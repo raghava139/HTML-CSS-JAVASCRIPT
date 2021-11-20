@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-create</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+        *{
+            margin:0;
+            padding:0;
+            outline-color:rgb(0, 0, 0);
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        body{
+            background:darkgoldenrod;
+        }
+        .laptop{
+           top:50%;
+           left:40%;
+           position: absolute;
+           box-shadow:4px 4px 4px 6px rgb(255, 255, 255);
+            padding:20px;
+            background:white;
+            border-radius:5px;
+            overflow: hidden;
+            max-width:200px;
+            width:100%;
+            transform:translate(20%,-50%);
+            min-height:60%;
+            min-width: 20%;
+           
+            
+        }
+        .laptop .system{
+        margin:0px 20px 10px 0px;
+        font-size:22px;
+        padding-left:0px;
+        width:100%;
+        }
+        .lab{
+            font-size:18px;
+            margin:0px;
+        }
+        .laptop h1{
+            font-size: 20px;
+            text-align:center;
+            letter-spacing:1px;
+            color:black;
+            width:100%;
+            text-transform: uppercase;
+            margin-bottom: 10%;
+            border-width:100%;
+            border-radius:20px;
+
+        }
+        .laptop .button
+        {
+            background-color:black;
+            color:white;
+            text-align:center;
+            justify-content: center;
+            width:100%;
+            border-radius:20px;
+            font-size: 20px;
+            margin-top:20px;
+            text-transform: uppercase;
+            padding-top:5px;
+            letter-spacing:4px;
+        }
+    .laptop .fa-check-circle 
+    {
+      font-size:15px;
+      color:green;
+      padding-left:42%;
+      margin-left:41%;
+      margin-top:0px;
+   
+    }
+    .laptop .fa-exclamation-circle{
+        font-size:15px;
+        color:red;
+        margin-top:0px;
+       
+     }
+     .log{
+         font-size:70px;
+        text-align:left;
+        justify-content:flex-start;
+        top:20%;
+        left:10%;
+        position:absolute;
+        font-family: 'Kaushan Script', cursive;
+      
+     }
+     .logo{
+        font-size:60px;
+        text-align:left;
+        justify-content:flex-start;
+        top:33%;
+        left:10%;
+        position:absolute;
+        font-family: 'Kaushan Script', cursive;
+     }
+     
+    
+    </style>
+</head>
+<body>
+    <div class='log'>Welcome  to </div>
+    <div class='logo'>Logo Design</div>
+<div>
+    <form class='laptop'id='lap'>
+        <div>
+            <h1>Create New Account</h1>
+        </div>
+     <div>
+        <label class='lab'>Username</label>
+        <input type='text'placeholder='Enter username'id='username'class='system'>
+        <i class="fa fa-check-circle "></i>
+        <i class="fa fa-exclamation-circle " ></i>
+    </div>
+    <div>
+        <label class='lab'>Email</label>
+        <input type='email'placeholder='Enter Email'id='email'class='system'>
+        <i class="fa fa-check-circle" id="circle" ></i>
+        <i class="fa fa-exclamation-circle " ></i>
+    </div>
+    <div>
+        <label class='lab'>Mobile Number</label>
+        <input type='text'placeholder='Enter Mobile Number'id='number'class='system'>
+        <i class="fa fa-check-circle " ></i>
+        <i class="fa fa-exclamation-circle " ></i>
+    </div>
+    <div>
+        <label class='lab'>Password</label>
+        <input type='password'placeholder='Enter Password'id='password'class='system'>
+        <i class="fa fa-check-circle " ></i>
+        <i class="fa fa-exclamation-circle " ></i>
+    </div>
+    <div>
+        <label class='lab'>Confirm Password</label>
+        <input type='password'placeholder='Confirm Password'id='ccpassword'class='system'>
+        <i class="fa fa-check-circle " ></i>
+        <i class="fa fa-exclamation-circle " ></i>
+    </div>
+    <div>
+        <button type=submit id='button'class='button'>SUBMIT</button>
+    </div>
+</div>
+    </form>
+    <script>
+
+        let lap=document.getElementById('lap')
+        lap.addEventListener('submit',function(e)
+        {
+           var username =document.getElementById('username');
+                if(username.value==""||username.value.length<5)
+                {
+                    let username=document.getElementById('uername').value
+                    username.style.backgroundColor='red';
+                }
+            
+        });
+    </script>
+</body>
+</html>

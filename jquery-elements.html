@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jquery elements</title>
+</head>
+<body>
+<section>
+<h1 class='firsthd'> we have to append element</h1>
+<p>this is para</p>
+<div>this is my laptop</div>
+<div class='lap'>this is my dell</div>
+<div class='lap'>this is my lenovo</div>
+<div>this is my samsung</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    // elements
+    //append element
+    //prepend element
+    //after element
+    //before element
+// append element
+
+    $(document).ready(function(){
+        
+        var text='<h3>this is heading append tag</h3>'
+        $('body').append(text);
+
+        var x='<div>this is div append tag</div>'
+        $('p').append(x);
+
+    });
+
+//prepend element
+
+$(document).ready(function(){
+
+    var y='<h2>this is my second heading prepend tag</h2>'
+    $('p').prepend(y);
+
+});
+    //after element
+
+    $(document).ready(function(){
+        
+        var z='<h1>this is after heading element tag</h1>'
+        $('.firsthd').after(z);
+    });
+
+    //before element
+
+    $(document).ready(function(){
+        
+        var z='<h1>this is before heading element tag</h1>'
+        $('h3').before(z);
+    });
+
+
+    // Remove elements
+
+    //remove---to delete the remove element
+    //empty----to delete the content
+
+    //remove
+
+    $(document).ready(function(){
+        
+        
+        // $('.firsthd').remove();
+        // // $('p').remove();
+        // $('div').remove('.lap');
+
+    });
+    
+
+    //empty
+
+    $(document).ready(function(){
+        $('.lap').empty();
+        var tag='<h4>this is result of empty element</h4>'
+        $('.lap').after(tag);
+    });
+
+
+
+
+
+
+</script>  
+</html>

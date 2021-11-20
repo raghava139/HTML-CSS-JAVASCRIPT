@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML</title>
+    <script src='DynamicHT.js'></script>
+    <link rel="stylesheet" href="Dynamic.css">
+</head>
+<body>
+
+        <table>
+            <thead>
+                <th>Id</th>
+                <th>userName</th>
+                <th>Email</th>
+                <th>Adrress</th>
+            </thead>
+            <tbody id='myTable'>
+
+            </tbody>
+        </table>
+        <div class='myDiv'id='mySec'>
+
+        </div>
+    <script>
+
+        var Table=document.getElementById('myTable')
+
+        var Dynamic=""
+
+        for(let i=0;i<myUserData.length;i++)
+        {
+            Dynamic+='<tr>'
+            Dynamic+='<td>'+myUserData[i].id+'</td>'
+            Dynamic+='<td>'+myUserData[i].username+'</td>'
+            Dynamic+='<td>'+myUserData[i].email+'</td>'
+            Dynamic+='<td>'+myUserData[i].address.geo.lng+'</td>'
+            Dynamic+='</tr>'
+        }
+        Table.innerHTML=Dynamic;
+
+        var myReal=document.getElementById('mySec')
+
+        var myDynamic="";
+
+        for (let j=0;j<myUserData.length;j++)
+        {
+            myDynamic+='<div>'
+                myDynamic+='<p>'+myUserData[j].id+'</p>'
+                myDynamic+='<p>'+myUserData[j].username+'</p>'
+                myDynamic+='<p>'+myUserData[j].email+'</p>'
+                myDynamic+='<p>'+myUserData[j].address.street+'</p>'
+            myDynamic+='</div>';
+        }
+
+           myReal.innerHTML=myDynamic;
+        //    console.log(myReal)    
+ 
+    </script>
+</body>
+</html>

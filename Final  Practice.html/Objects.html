@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        // objects 
+        //array of objects
+        // object literals
+        //  object constructor
+
+
+        //object
+            var myObj={
+                FirstName:'Yallamanda',
+                LastName:'Raghavendra',
+                Email:'styleraghava@gmail.com'
+            }
+            console.log(myObj.FirstName);
+            console.log(myObj.LastName);
+            // array of objects
+            //object literals---It is a comma(,) separate list of name-value paires of inside of curly braces
+          var Cars=[
+              {
+                    height:66,
+                    // object literal(,)
+                    weight:55,
+                    color:'yellow',
+                    width:88,
+                    productName:'kia'
+              },
+              {
+                    height:58,
+                    weight:55,
+                    color:'black',
+                    width:88,
+                    productName:'kia'
+              },   
+                 {
+                    height:28,
+                    weight:55,
+                    color:{
+                        FirstColor:'red',
+                        secondColor:'grey'
+                    },
+                    width:88,
+                    productName:'kia'
+              },      {
+                    height:23,
+                    weight:55,
+                    color:'green',
+                    width:88,
+                    productName:'kia'
+              }
+          ];
+  
+         for (i=0;i<Cars.length;i++){
+             console.log(Cars[2].color.secondColor)
+             console.log(Cars[i])
+            }
+        //object constructor
+
+        function Electronics(mobile,laptop,tv)
+        {
+            this.firstProduct=mobile;
+            this.secondProduct=laptop;
+            this.thirdProduct=tv;
+    
+        }
+        
+            var myFirstProduct=new Electronics('samsung','lenovo','mi')
+            console.log(myFirstProduct)
+            var mySecondProduct=new Electronics('LG','moto','intel')
+            console.log(mySecondProduct)
+            var myThirdProduct=new Electronics('corei3','corei2','corei1')
+            console.log(myThirdProduct)
+                 
+        
+      
+  
+         
+
+    </script>
+</body>
+</html>

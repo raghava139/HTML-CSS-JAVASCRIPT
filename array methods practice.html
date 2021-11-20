@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array methods practice</title>
+</head>
+<body>
+    <script>
+        var fruits=['apple','banana','mango','orange','pineapple'];
+        console.log(fruits.toString());
+        
+        const vegetables=['tomato','cucumber','potato'];
+        console.log(vegetables.join('-'));
+        
+        var subjects=['telugu','english','maths','science','social'];
+        console.log(subjects.push('sanskrit'));
+       console.log(subjects);
+      
+       const company=['infosys','tcs','cts','hcl'];
+       console.log(company.pop());
+       console.log(company);
+      
+       var languages=['tamil','telugu','hindi','english'];
+       console.log(languages.shift());
+       console.log(languages);
+      
+       var numbers=[10,20,30,40];
+       console.log(numbers.unshift(5));
+       console.log(numbers);
+       
+       const laptop=['hp','dell','acer','lenovo',];
+       console.log(laptop.indexOf('lenovo'));
+      
+       var earPhones=['boat','jbl','samsung','mi'];
+       console.log(earPhones.length);
+       
+       const btech=['civil','mechanical','cse','ece'];
+       delete btech[1]
+       console.log(btech);
+       
+       var a=['raghava','rajesh','naresh','dinesh'];
+       var b= a.slice(1,3);
+       console.log(b);
+
+       var c=['google','facebook','instagram','twitter','pinterest']
+       c.splice(1,2,"whatsapp","youtube");
+       document.write(c);
+    
+       const myMobiles=['mi','samsung','sony'];
+       const myLaptops=['lenovo','dell','hp']
+       const mynumbers=[30,40,50];
+       const my=myMobiles.concat(myLaptops,mynumbers);
+       console.log(my);
+
+       const p=['good','bad'];
+       const h=p.concat('notgood','notbad');
+       console.log(h);
+    </script>
+</body>
+</html>

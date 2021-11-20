@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+    <div id='property'>
+        
+    </div>
+        </section>
+    </table>
+ <script>
+    'use strict';
+        var computer=
+        [
+            {
+            id:'111',
+            name:'raghava',
+            mobilenumber:'9676324174',
+            email:'raghava@gmail.com',
+            },
+            {
+            id:'121',
+            name:'naresh',
+            mobilenumber:'9676324174',
+            email:'naresh@gmail.com',
+            },
+            {
+            id:'131',
+            name:'rajesh',
+            mobilenumber:'9676324174',
+            email:'rajesh@gmail.com',
+            },
+            {
+            id:'141',
+            name:'lokesh',
+            mobilenumber:'9676324174',
+            email:'lokesh@gmail.com',
+            },
+            {
+            id:'151',
+            name:'pavan',
+            mobilenumber:'9676324174',
+            email:'pavan@gmail.com',
+            },
+        ];
+        var laptop=document.querySelector('#property');
+        var mouse="";
+        for(var i=0;i<computer.length;i++);
+        {
+            mouse+='<div>';
+            mouse+='<p>'+computer[i].id+'</p>';
+            mouse+='<p>'+computer[i].name+'</p>';
+            mouse+='<p>'+computer[i].mobilenumber+'</p>';
+            mouse+='<p>'+computer[i].email+'</p>';
+            mouse+='</div>';
+        }
+        mouse.innerHTML=property; 
+    </script>
+</body>
+</html>

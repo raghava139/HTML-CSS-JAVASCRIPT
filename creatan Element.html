@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create an element</title>
+</head>
+<body>
+    <script>
+
+        var body=document.body
+        
+        var heading=document.createElement('h');
+        heading.innerText='it is heading tag';
+        body.append(heading);
+   //append child     
+        var paragraph=document.createElement('p');
+        paragraph.innerText='it is paragraph tag';
+        body.appendChild(paragraph);
+        
+        var section=document.createElement('section');
+        section.innerText='this is first section';
+        body.appendChild(section);
+        section.style.backgroundColor='red';
+        
+        var div=document.createElement('div');
+        div.innerText='this is my first div';
+        section.appendChild(div);
+        div.style.color='white';
+       
+        var div1=document.createElement('div');
+        div1.innerText='this is my second div';
+        div.appendChild(div1);
+        
+        var img=document.createElement('img');
+        div1.appendChild(img);
+//remove
+        img.remove();
+        
+        var yy=document.createElement('p');
+        yy.innerText='lorem200'
+        body.appendChild(yy);
+//removechild
+        body.removeChild(yy);
+//setaattribute
+        paragraph.setAttribute('class','raghava');
+        paragraph.setAttribute('id','listen');
+        paragraph.setAttribute('style','font-size:85px;')
+        console.log(paragraph)
+//getAttribute     
+        var get=paragraph.getAttribute('class')
+        var get=paragraph.getAttribute('id')
+        var get=paragraph.getAttribute('style')
+        console.log(get);
+//classlist
+       var jj=document.createElement('content')
+       jj.innerText='these are all members good';
+        body.appendChild(jj);
+        jj.classList.add('ganesh');
+        jj.classList.remove('ganesh');
+ </script>
+</body>
+</html>

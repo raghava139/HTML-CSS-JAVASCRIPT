@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:goldenrod;
+        }
+        h3
+        {
+            position:absolute;
+            left:40%;
+            top:40%;
+            background-color: white;
+            box-shadow: 2px 4px 3px 3px rgba(0,0,0,0.3);
+            font-size: 40px;
+            border-radius: 5px;
+        }
+        input[type='submit']
+        {
+            position:absolute;
+            left:41%;
+            top:55%;
+            font-size: 30px;
+            box-shadow: 2px 3px 4px 3px rgba(0,0,0,0.3);
+            background-color:white;
+          
+            border-radius: 5px;
+            width:12%;
+        }
+        .newpop
+        {
+            width:100%;
+            height:100%;
+            background-color:rgba(0,0,0,0.5);
+            position:absolute;
+            top:0%;
+            left:0%;
+            display:none;
+        
+        }
+        .spop
+        {
+            position:absolute;
+            top:50%;
+            left:40%;
+            background:rosybrown;
+            padding:12px;
+            font-size: 30px;
+            font-weight:bold;
+        }
+        .yes
+        {
+            position:relative;
+            left:12%;
+            width:30%;
+        }
+        .cancel
+        {
+            position:relative;
+            left:24%;
+            width:30%;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h3 class='login'>login form</h3>
+    <input type='submit' class='btn'id='btn' value='submit'>
+ 
+
+    <div class='newpop' id='newP'>
+        <div class='spop'>
+         <p>Are Sure To Login</p>
+         <input type='button'class='yes'id='ys'value='YES'>
+         <input type='button'class='cancel'id='canl'value='CANCEL'>
+         </div>
+    </div>
+</body>
+<script>
+    'use strict mode'
+        var btn=document.getElementById('btn')
+        btn.addEventListener('click',function(){
+
+            var newP=document.getElementById('newP')
+                newP.style.display='flex';
+        });
+        var ys=document.getElementById('ys')
+        ys.addEventListener('click',function(){
+
+            var ys=document.getElementById('ys')
+            var newP=document.getElementById('newP')
+            newP.remove();
+            alert('submitted sucessfully');    
+        });
+        var canl=document.getElementById('canl')
+        canl.addEventListener('click',function(){
+            var newP=document.getElementById('newP')
+            newP.remove();
+        });
+</script>
+</html>

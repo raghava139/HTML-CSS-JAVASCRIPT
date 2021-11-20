@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensions method</title>
+<style>
+    .graph
+    {
+
+        background-color: red;
+        margin:40px;
+        font-size: 50px;
+        border:4px solid green;
+        color:white;
+        padding:20px;
+    
+        
+        
+    }
+</style>
+</head>
+<body>
+
+<span class='graph'>
+    Here I am using Dimensions Method
+</span>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    //width()
+    //height()
+    //innerWidth()
+    //innerHeight()
+    //outerWidth()
+    //outerHeight()
+
+    var width=$('.graph').width();
+    var height=$('.graph').height();
+    var iH=$('.graph').innerHeight();
+    var oH=$('.graph').outerHeight();
+    var iW=$('.graph').innerWidth();
+    var oW=$('.graph').outerWidth();
+
+    console.log(`width: ${width}
+                heigth: ${height}
+            innerheight:${iH}
+            outerheight:${oH}
+            innerwidth:${iW}
+            outerwidth:${oW}`);
+
+
+
+
+</script>
+</html>

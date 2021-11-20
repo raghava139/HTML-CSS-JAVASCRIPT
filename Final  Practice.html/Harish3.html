@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT CONVERTER</title>
+    <style>
+        .myForm{
+            text-align: center;
+            font-size: 25px;
+        }
+      [type*='number']
+        {
+            width: 25%;
+           
+        }
+ 
+      .create{
+        text-align: center;
+        border:2px solid red;
+        
+      
+        font-size: 20px;
+      }
+    </style>
+</head>
+<body>
+
+        <div class='myForm'>
+       
+                <label>Enter The Distance in KM</label>
+                <input type='text'placeholder='Enter the value in km'onchange="MeterConverter(this.value)"/>
+                <button type='button'onclick="MeterConverter(myValue)">CONVERTER</button>
+         </div>
+            <br>
+             <div class='create'>  
+             <span>In Meters :<span id='FirstId'>0</span></span> <br><br>
+             <span>In Centimeters : <span id='secondId'>0</span></span></br><br>
+               <span>In inches : <span id='thirdId'>0</span></span><br><br>
+               <span>In Feets : <span id='fourthId'>0</span></span><br><br>
+            </div>
+
+    <script>
+            function MeterConverter(myValue)
+            {
+              console.log(myValue)
+                document.getElementById('FirstId').innerHTML=myValue*1000;
+                document.getElementById('secondId').innerHTML=myValue*100000;
+                document.getElementById('thirdId').innerHTML=myValue*39370;
+                document.getElementById('fourthId').innerHTML=myValue*3280.8;
+                // alert('ok')
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulating</title>
+</head>
+<body>
+
+
+    <section id='mySection'>
+        <div class='createDiv'>
+            
+            <p id='myPara'> this is p tag</p>
+        </div>
+    </section>
+
+    <script>
+        var My = document.body
+        var x=document.createElement('div')
+        x.innerText='This is my Div tag'
+        My.append(x)
+        var y=document.createElement('p')
+        y.innerHTML="hello"
+        x.append(y)
+
+        var z=document.createElement('h2')
+        z.innerHTML='my Heading tag'
+        x.append(z)
+
+        var btn=document.createElement('button')
+        btn.innerHTML='submit'
+        My.append(btn)
+
+
+        btn.remove()
+
+        // x.remove('p')
+        // x.removeChild(z)
+
+        
+        y.setAttribute('id','myid')
+        y.setAttribute('class','myClass')
+        y.getAttribute('id')
+
+
+        console.log(y.getAttribute('id'))
+        console.log(y.getAttribute('class'))
+
+            z.style.color='red'
+
+        // z.className='heading'
+        // z.id='idNames'
+        
+        z.classList.add('THis_heading')
+        // z.classList.remove('THis_heading')
+
+        z.classList.toggle('mycreateToggle')
+
+
+     
+        var myClosest=document.getElementById('myPara')
+        // var hello= myClosest.closest('.createDiv')
+        var hello = myClosest.closest('#mySection')
+        console.log(hello)
+        // hello.style.fontSize='50px'
+
+
+        y.classList.replace('myClass','ChangeTheName')
+
+        
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

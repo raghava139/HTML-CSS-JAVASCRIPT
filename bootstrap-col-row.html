@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap grid system</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<!-- <style>
+.container-fluid{
+    color:white
+}
+.col-6{
+    background-color:rgb(25, 0, 255);
+}
+.col-4{
+    background-color:green;
+}
+.col-3{
+    background-color:rgb(252, 179, 22);
+}
+.col-5{
+    background-color:coral;
+}
+.col-7{
+    background-color:cyan;
+}
+.col-12{
+    background-color:darkmagenta;
+}
+.col-2{
+    background-color:maroon;
+}
+.col-11{
+    background-color:mediumpurple;
+}
+.col-1{
+    background-color:orchid;
+}
+.col-8{
+    background-color:rgb(147, 18, 252);
+}
+.col-9{
+    background-color:lightgreen;
+}
+.col-10{
+    background-color:lime;
+}
+.rag{
+    color:white;
+}
+</style> -->
+</head>
+<body>
+<!-- <div class='container-fluid'>
+    <div class='row'>
+        <div class= 'col-12 col-sm-10 col-md-2 col-lg-7 col-xl-12'>col1</div>
+        <div class= 'col-11 col-sm-2 col-md-10 col-lg-5 col-xl-12'>col2</div>
+        <div class= 'col-4 col-sm-6 col-md-3 col-lg-8 col-xl-12'>col3</div>
+        <div class= 'col-2 col-sm-6 col-md-9 col-lg-4 col-xl-12'>col4</div>
+        <div class= 'col-3 col-sm-1 col-md-11 col-lg-6 col-xl-12'>col5</div>
+        <div class= 'col-6 col-sm-11 col-md-1 col-lg-6 col-xl-12'>col6</div>
+        <div class= 'col-4 col-sm-1 col-md-5 col-lg-3 col-xl-12'>col7</div>
+        <div class= 'col-8 col-sm-11 col-md-7 col-lg-9 col-xl-12'>col8</div>
+        <div class= 'col-9 col-sm-10 col-md-5 col-lg-10 col-xl-12'>col9</div>
+        <div class= 'col-10 col-sm-2 col-md-7 col-lg-2 col-xl-12'>col10</div>
+        <div class= 'col-11 col-sm-5 col-md-7 col-lg-5 col-xl-12'>col11</div>
+        <div class= 'col-12 col-sm-7 col-md-5 col-lg-7 col-xl-12'>col12</div>
+    </div>
+</div>
+<div class= 'rag'>
+    <p class='col-2 col-sm-12 col-md-3 col-lg-8 col-xl-12'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rem earum nemo, assumenda sed perspiciatis modi, tempore voluptates dolores 
+        ratione in repellendus, 
+        voluptatem aperiam ea. Ipsa iure dolorum possimus quis quo!
+    </p>
+</div> -->
+
+
+<!-- colors -->
+<!-- <div>
+    <p class=text-primary>This</p>
+    <p class=text-secondary>This</p>
+    <p class=text-success>This</p>
+    <p class=text-danger>This</p>
+    <p class=text-warning>This</p>
+    <p class=text-info>This</p>
+    <p class='text-light bg-dark '>This</p>
+    <p class=text-dark>This</p>
+    <p class=text-body>This</p>
+    <p class='text-muted bg-dark'>This</p>
+    <p class='text-white bg-dark'>this</p>
+    <p class=text-black-50>This</p>
+    <p class='text-white-50 bg-dark'>this</p>
+</div> -->
+
+
+<!-- background-colors -->
+ <!-- except
+ bg-body
+ bg-muted -->
+
+<!-- <div>
+    <div class='bg-primary'>This is my Laptop</div>
+    <div class='bg-secondary text-white'>This is my Laptop</div>
+    <div class='bg-success'>This is my Laptop</div>
+    <div class='bg-danger'>This is my Laptop</div>
+    <div class='bg-warning'>This is my Laptop</div>
+    <div class='bg-info'>This is my Laptop</div>
+    <div class='bg-dark text-light'>This is my Laptop</div>
+    <div class='bg-white'>This is my Laptop</div>
+    <div class='bg-transparent'>This is my Laptop</div>
+</div> -->
+
+
+<!---anchor links color -->
+<!-- all are available -->
+<!-- 
+<a href="#" class='text-danger'>this is my anchor tag</a>
+ -->
+
+<!--background-gradients-->
+<!-- <div>
+    <div class='bg-gradient-primary text-dark'>this is gradients</div>
+    <div class='bg-gradient-danger text-dark'>this is gradients</div>
+    <div class='bg-gradient-secondary '>this is gradients</div>
+    <div class='bg-gradient-warning '>this is gradients</div>
+    <div class='bg-gradient-info'>this is gradients</div>
+    <div class='bg-gradient-dark '>this is gradients</div>
+    <div class='bg-gradient-white '>this is gradients</div>
+    <div class='bg-gradient-light '>this is gradients</div>
+    <div class='bg-gradient-success text-warning'>this is gradients</div>
+</div> -->
+
+<!-- borders -->
+
+<!-- border-additive -->
+
+<!-- <span class='border'> this is my additive border</span>
+<span class='border-top'> this is my additive border</span>
+<span class='border-right'> this is my additive border</span>
+<span class='border-bottom'> this is my additive border</span>
+<span class='border-left'> this is my additive border</span> -->
+<!---border-subtractive-->
+<!-- <span class='border-0'> this is my additive border</span>
+<span class='border-top-0'> this is my additive border</span>
+<span class='border-right-0'> this is my additive border</span>
+<span class='border-bottom-0'> this is my additive border</span>
+<span class='border-left-0'> this is my additive border</span> -->
+
+<!---border-color-->
+<!-- <span class='border border-danger'>this is border color</span>
+<span class='border border-primary'>this is border color</span>
+<span class='border border-secondary'>this is border color</span> -->
+
+<!---border-radius-->
+
+<!-- <img src='https://images.pexels.com/photos/210186/pexels-photo-21018
+6.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'alt='nature'class='rounded-circle'> -->
+
+
+<p class='h1'> this is hero</p>
+<p class='h2'> this is hero</p>
+<p class='h3'> this is hero</p>
+<p class='h4'> this is hero</p>
+<p class='h5'> this is hero</p>
+<p class='h6'> this is hero</p>
+<p class="lead">
+    Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+  </p>
+  <p class="mark">
+    Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+  </p>
+  <p class="small">
+    Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+  </p>
+
+<!-- Text-utilities -->
+
+<!-- abbreviations -->
+<p class='text-body'><abbr title='this is abbr'class='initialism'>this is bootstrap</abbr></p>
+<!-- blockquotes -->
+<p class='blockquote text-center'>this is raghava</p>
+
+<p class='blockquote text-right'>this is raghava</p>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+</body>
+<script>
+    
+</script>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap grid system</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<!-- <style>
+.container-fluid{
+    color:white
+}
+.col-6{
+    background-color:rgb(25, 0, 255);
+}
+.col-4{
+    background-color:green;
+}
+.col-3{
+    background-color:rgb(252, 179, 22);
+}
+.col-5{
+    background-color:coral;
+}
+.col-7{
+    background-color:cyan;
+}
+.col-12{
+    background-color:darkmagenta;
+}
+.col-2{
+    background-color:maroon;
+}
+.col-11{
+    background-color:mediumpurple;
+}
+.col-1{
+    background-color:orchid;
+}
+.col-8{
+    background-color:rgb(147, 18, 252);
+}
+.col-9{
+    background-color:lightgreen;
+}
+.col-10{
+    background-color:lime;
+}
+.rag{
+    color:white;
+}
+</style> -->
+</head>
+<body>
+<!-- <div class='container-fluid'>
+    <div class='row'>
+        <div class= 'col-12 col-sm-10 col-md-2 col-lg-7 col-xl-12'>col1</div>
+        <div class= 'col-11 col-sm-2 col-md-10 col-lg-5 col-xl-12'>col2</div>
+        <div class= 'col-4 col-sm-6 col-md-3 col-lg-8 col-xl-12'>col3</div>
+        <div class= 'col-2 col-sm-6 col-md-9 col-lg-4 col-xl-12'>col4</div>
+        <div class= 'col-3 col-sm-1 col-md-11 col-lg-6 col-xl-12'>col5</div>
+        <div class= 'col-6 col-sm-11 col-md-1 col-lg-6 col-xl-12'>col6</div>
+        <div class= 'col-4 col-sm-1 col-md-5 col-lg-3 col-xl-12'>col7</div>
+        <div class= 'col-8 col-sm-11 col-md-7 col-lg-9 col-xl-12'>col8</div>
+        <div class= 'col-9 col-sm-10 col-md-5 col-lg-10 col-xl-12'>col9</div>
+        <div class= 'col-10 col-sm-2 col-md-7 col-lg-2 col-xl-12'>col10</div>
+        <div class= 'col-11 col-sm-5 col-md-7 col-lg-5 col-xl-12'>col11</div>
+        <div class= 'col-12 col-sm-7 col-md-5 col-lg-7 col-xl-12'>col12</div>
+    </div>
+</div>
+<div class= 'rag'>
+    <p class='col-2 col-sm-12 col-md-3 col-lg-8 col-xl-12'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rem earum nemo, assumenda sed perspiciatis modi, tempore voluptates dolores 
+        ratione in repellendus, 
+        voluptatem aperiam ea. Ipsa iure dolorum possimus quis quo!
+    </p>
+</div> -->
+
+
+<!-- colors -->
+<!-- <div>
+    <p class=text-primary>This</p>
+    <p class=text-secondary>This</p>
+    <p class=text-success>This</p>
+    <p class=text-danger>This</p>
+    <p class=text-warning>This</p>
+    <p class=text-info>This</p>
+    <p class='text-light bg-dark '>This</p>
+    <p class=text-dark>This</p>
+    <p class=text-body>This</p>
+    <p class='text-muted bg-dark'>This</p>
+    <p class='text-white bg-dark'>this</p>
+    <p class=text-black-50>This</p>
+    <p class='text-white-50 bg-dark'>this</p>
+</div> -->
+
+
+<!-- background-colors -->
+ <!-- except
+ bg-body
+ bg-muted -->
+
+<!-- <div>
+    <div class='bg-primary'>This is my Laptop</div>
+    <div class='bg-secondary text-white'>This is my Laptop</div>
+    <div class='bg-success'>This is my Laptop</div>
+    <div class='bg-danger'>This is my Laptop</div>
+    <div class='bg-warning'>This is my Laptop</div>
+    <div class='bg-info'>This is my Laptop</div>
+    <div class='bg-dark text-light'>This is my Laptop</div>
+    <div class='bg-white'>This is my Laptop</div>
+    <div class='bg-transparent'>This is my Laptop</div>
+</div> -->
+
+
+<!---anchor links color -->
+<!-- all are available -->
+<!-- 
+<a href="#" class='text-danger'>this is my anchor tag</a>
+ -->
+
+<!--background-gradients-->
+<!-- <div>
+    <div class='bg-gradient-primary text-dark'>this is gradients</div>
+    <div class='bg-gradient-danger text-dark'>this is gradients</div>
+    <div class='bg-gradient-secondary '>this is gradients</div>
+    <div class='bg-gradient-warning '>this is gradients</div>
+    <div class='bg-gradient-info'>this is gradients</div>
+    <div class='bg-gradient-dark '>this is gradients</div>
+    <div class='bg-gradient-white '>this is gradients</div>
+    <div class='bg-gradient-light '>this is gradients</div>
+    <div class='bg-gradient-success text-warning'>this is gradients</div>
+</div> -->
+
+<!-- borders -->
+
+<!-- border-additive -->
+
+<!-- <span class='border'> this is my additive border</span>
+<span class='border-top'> this is my additive border</span>
+<span class='border-right'> this is my additive border</span>
+<span class='border-bottom'> this is my additive border</span>
+<span class='border-left'> this is my additive border</span> -->
+<!---border-subtractive-->
+<!-- <span class='border-0'> this is my additive border</span>
+<span class='border-top-0'> this is my additive border</span>
+<span class='border-right-0'> this is my additive border</span>
+<span class='border-bottom-0'> this is my additive border</span>
+<span class='border-left-0'> this is my additive border</span> -->
+
+<!---border-color-->
+<!-- <span class='border border-danger'>this is border color</span>
+<span class='border border-primary'>this is border color</span>
+<span class='border border-secondary'>this is border color</span> -->
+
+<!---border-radius-->
+
+<!-- <img src='https://images.pexels.com/photos/210186/pexels-photo-21018
+6.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'alt='nature'class='rounded-circle'> -->
+
+
+<p class='h1'> this is hero</p>
+<p class='h2'> this is hero</p>
+<p class='h3'> this is hero</p>
+<p class='h4'> this is hero</p>
+<p class='h5'> this is hero</p>
+<p class='h6'> this is hero</p>
+<p class="lead">
+    Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+  </p>
+  <p class="mark">
+    Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+  </p>
+  <p class="small">
+    Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+  </p>
+
+<!-- Text-utilities -->
+
+<!-- abbreviations -->
+<p class='text-body'><abbr title='this is abbr'class='initialism'>this is bootstrap</abbr></p>
+<!-- blockquotes -->
+<p class='blockquote text-center'>this is raghava</p>
+<p class='blockquote'>this is raghava</p>
+<p class='blockquote text-right'>this is raghava</p>
+
+<ul class="list-unstyled">
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>Integer molestie lorem at massa</li>
+    <li>Facilisis in pretium nisl aliquet</li>
+    <li>Nulla volutpat aliquam velit</li>
+</ul>
+<ul class="list-inline">
+    <li class="list-inline-item">Lorem ipsum</li>
+    <li class="list-inline-item">Phasellus iaculis</li>
+    <li class="list-inline-item">Nulla volutpat</li>
+  </ul>
+
+
+  <dl class="row">
+    <dt class="col-sm-3">Description lists</dt>
+    <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+  
+    <dt class="col-sm-3">Euismod</dt>
+    <dd class="col-sm-9">
+      <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+      <p>Donec id elit non mi porta gravida at eget metus.</p>
+    </dd>
+  
+    <dt class="col-sm-3">Malesuada porta</dt>
+    <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+  
+    <dt class="col-sm-3">Truncated term is truncated</dt>
+    <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+  
+    <dt class="col-sm-3">Nesting</dt>
+    <dd class="col-sm-9">
+      <dl class="row">
+        <dt class="col-sm-4">Nested definition list</dt>
+        <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
+      </dl>
+    </dd>
+  </dl>
+<!---CONTENT-->
+<!---code block-->
+<!---&lt---lessthan-->
+<!---&gt---greaterthan-->
+  <pre>
+      <code>
+        &lt;p&gt;Sample text here...&lt;/p&gt;
+        &lt;p&gt;And another line of sample text here...
+        &lt;/p&gt;
+    </code>
+</pre>
+
+<pre>
+    <code>
+        &lt;h&gt;this is heading tag&lt;h&gt;
+    </code>
+</pre>
+<!--inline code-->
+<code>&lt;div&gt;this is div tag&lt;div&gt;</code>
+
+<!--variables-->
+<var>x</var>=<var>y</var><var>z</var>+<var>a</var>
+
+<!--variables-->
+<kbd>cd</kbd>
+<kbd>
+    <kbd>ctrl</kbd>
+   +
+    <kbd>,</kbd>
+</kbd> 
+
+
+<!--images-->
+<!-- img-fluid -->
+<!--img-thumbnail-->
+<img src="https://images.unsplash.com/photo-1482148454461-aaedae4b30bb?ixid=MnwxM
+jA3fDB8MHxzZWFyY2h8MzZ8fG5hdHVyYWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"class='img-thumbnail img-fluid' alt="nat">
+<!---picture-->
+​<picture>
+    <source srcset="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?
+    ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" type="image/svg+xml">
+    <img src="https://i1.wp.com/sociallover.net/wp-content/uploads/2017/06/nature-images.png" class="img-fluid img-thumbnail" alt="...">
+</picture>
+<!--propeties
+m-margin
+p-padding
+
+t-top margin and top padding
+b-bottom
+l-left
+r-right
+x-left and right
+y-top and bottom
+blank-all four sides of the margin and padding
+-->
+
+<p class=mt-2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur obcaecati odio repellendus, commodi eaque deleniti delectus iure, 
+    neque nesciunt rerum, possimus et provident dolor temporibus sunt autem molestias? Aliquid, at.</p>
+<!--horizontal centering-->
+    <div class="mx-auto" style="width: 200px;">
+        Centered element
+      </div>
+
+    <!-- custom padding -->
+      <div class="row mx-md-n5">
+        <div class="col px-md-5"><div class="p-3 border bg-primary">Custom column padding</div></div>
+        <div class="col px-md-2"><div class="p-3 border bg-secondary">Custom column padding</div></div>
+      </div>
+    <!-- tables -->
+    <!-- 
+    class="table"
+    scope='col'
+    scope='row'
+    
+    
+    
+    class='table table-dark'
+   
+   
+   
+    table striped
+    class='table table-striped'
+  
+  
+    table border
+    class='table table-bordered'
+    class='table table-bordered table-dark'
+    
+    
+    table borderless
+    class='table table-borderlesss'
+    class='table table-borderlesss table-dark'
+   
+
+
+    hoverable table
+    class='table table-hover'
+    class='table table-hover table-dark'
+
+
+
+    smalltable
+    class='table table-sm'
+    
+    
+    colors table
+    class='table table-primary'
+    <tr class='bg-primary'>  or td,th,tr
+    
+    
+    
+        table-responsive
+    <div class='table-responsive-md'>
+        <table class='table'>
+        </table>
+    <div>
+    
+     -->
+
+
+ <!-- class="table" -->
+     <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    
+
+    <!--table table-dark-->
+
+      <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- thead-dark -->
+<!-- thead-light -->
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Figures -->
+
+  <figure class='figure'>
+    <img src="data:image/jpeg;base64,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"alt='natu'>
+    <figcaption class='figure-caption'>this is my nature</figcaption>
+  </figure> 
+  <br>
+  <!--component-->
+  <!--buttons-->
+  <!--button using with colors-->
+
+  <button type='button' class='btn btn-primary'>this is primary button</button>
+  <button type='button' class='btn btn-danger'>this is danger button</button>
+
+  <!--button tags-->
+  <!---using for any elements-->
+  
+  <a class='btn btn-warning' href="#">the link button</a>
+  <h2 class='btn btn-secondary'>this is heading button</h2> 
+  
+  
+  <!--using outline button-->
+  <h class='btn btn-outline-success'>this is outline success color</h>
+  
+  <!--button sizes-->
+  <!--small and big-->
+
+  <button class='btn btn-primary btn-sm'>this is small size button</button>
+  <button class='btn btn-primary btn-lg'>this is large size button</button>
+
+  <!-- button block-->
+  <button class='btn btn-danger btn-lg btn-block'>this is block button</button>
+  &nbsp;
+
+  <!-- active state -->
+
+  <button class='btn btn-primary active' aria-pressed='true'>this is active button</button>
+
+  <!----disabled state-->
+
+  <button class='btn btn-primary'disabled aria-disabled='true'>this is inactive button</button>
+
+  <!-- 
+  button-plugin or button -toggle
+  It is same as active state
+  Here we have to use
+  data-toggle='button' -->
+
+  <!--button-checkbox-using group-->
+<!--here we have to using this input this class='btn-group btn-group-toggle' data-toggle='button'-->
+
+  <div class='btn-group btn-group-toggle' data-toggle='button'>
+    <label class='btn btn-success'>
+      <input type='radio' id='activeB'>active
+    </label>
+    <label class='btn btn-success'>
+      <input type='radio' id='activeB'>inactive
+    </label>
+    <label class='btn btn-success'>
+      <input type='radio' id='activeB'>always
+    </label>
+    <label class='btn btn-success'>
+      <input type='radio' id='activeB'>not
+    </label>
+  </div>
+  <!---button group-->
+
+  <!-- this is also same as button group ,but here we have to using buttons group that is class='btn-group' -->
+
+
+  <div class='btn-group'>
+    <button class='btn btn-danger'>dangerbutton</button>
+    <button class='btn btn-danger'>dangerbutton</button>
+    <button class='btn btn-danger'>dangerbutton</button>
+    <button class='btn btn-danger'>dangerbutton</button>
+    <button class='btn btn-danger'>dangerbutton</button>
+    <button class='btn btn-danger'>dangerbutton</button>
+  </div>
+
+
+
+  
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+</body>
+<script>
+    
+</script>
+</html>

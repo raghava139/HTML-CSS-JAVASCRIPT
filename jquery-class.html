@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes</title>
+</head>
+<body>
+    <section>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Consectetur perferendis doloribus explicabo quae, quo repudiandae autem 
+            illum at quia iste nostrum? Error, est. Expedita est vero totam? Deleniti, corrupti vitae.
+        </p>
+    
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Consectetur perferendis doloribus explicabo quae, quo repudiandae autem 
+             illum at quia iste nostrum? Error, est. Expedita est vero totam? Deleniti, corrupti vitae.
+        </p>
+            
+        <p class='mobile'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+           Consectetur perferendis doloribus explicabo quae, quo repudiandae autem 
+           illum at quia iste nostrum? Error, est. Expedita est vero totam? Deleniti, corrupti vitae.
+        </p>
+    </section>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+//set class and remove class
+
+//addClass()
+//removeClass()
+//toggleClass()
+//css();
+
+//addClass()
+$(document).ready(function(){
+
+$('p').addClass('paragraph')
+});
+
+
+//removeClass()
+$(document).ready(function(){
+    $('p').removeClass();
+});
+
+//toggleClass()
+$(document).ready(function(){
+
+    $('p').toggleClass('para');
+});
+//css()
+
+$(document).ready(function(){
+
+    //single css property using 
+    $('p').css('color','white')
+   
+    //multiple css properties using
+    $('p').css({'background-color':'green','fontSize':'40px'});
+});
+
+
+
+
+
+</script>
+</html>

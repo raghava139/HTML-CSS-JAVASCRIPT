@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom querySelectorAll</title>
+</head>
+<body>
+    <div class="main">
+        <div class="notmain" id="submain">
+            <p class="clear">this is your paragraph</p>
+            <p class='hero'>you are my hero</p>
+            <h id="notclear">this is not my heading</h><br><br>
+            <h id='right'>this is right</h>
+            <h2>this is wrong</h2>
+            <h3>this is mouse</h3>
+        </div>
+    </div>
+</body>
+<script>
+    var q=document.querySelectorAll('p')[1]
+    q.style.color='red';
+</script>
+</html>

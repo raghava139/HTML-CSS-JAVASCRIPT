@@ -1,0 +1,29 @@
+table,tr,th,td
+{
+    border:1px solid black;
+    font-size: 30px;
+}
+.myDiv{
+  
+    display:flex
+}
+ 
+.myDiv div{
+   
+    font-size:10px;
+    color:black;
+    padding: 2px 12px;
+}
+
+div p{
+    
+    margin:20px;
+    padding: 20px;
+    box-shadow: 2px 2px 25px red;
+}
+p:hover
+{
+    font-size: 15px;
+    background-color: yellow;
+    color:black
+}

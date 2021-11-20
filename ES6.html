@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es6</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //ES6
+
+    // 1.Let & const
+    // 2.Arrow functions
+    // 3.promises
+    // 4.destructing
+    // 5.class
+    // 6.Rest and spread operator
+    // 7.template literals
+    // 8.default parameters
+
+
+    // //4.destructing
+    // example-1
+    let arr=[23,34,43,99,67];
+    // let x=arr[0];
+    // let b=arr[arr.length-1];
+    // console.log(x,b);
+    const[a, , ,d, ]=arr;
+    console.log(a,d)
+    //example-2
+    let obj={
+        firstName:'raghava',
+        email:'raghava@gmail.com',
+        address:'kadapa',
+    }
+    const {firstName,email,address}=obj;
+    console.log(firstName+' ' +address);
+    //example-3
+    let array=[0,1,2,3,4,5]
+    const[k,l , , , ,]= array;
+    console.log(k,l);
+    //example-4
+    let system={
+        name:'dell',
+        version:'10',
+        ram:'2gb',
+        addr:{
+            street:'banglore',
+            area:'marth',
+            layout:'fist',
+            },
+    };
+    
+    const { addr:{street} }=system;
+    console.log(street);
+
+    //6.spread and rest operators
+    
+    // spread operators
+    //example-1
+    let h=[3,5,6]
+    let y=[7,8,0]
+    // let add=[h,y]
+    // console.log(add);
+    let combine=[...h,...y]
+    console.log(combine);
+    
+    //example-2
+
+    let mobile=
+    {
+        mName:'mi',
+        model:'2124dfd',
+        madeIn:'india'
+    }        
+
+    let mobiles=
+    {
+       
+        ...mobile,
+        mName:'samsung',
+    }
+    console.log(mobiles);
+
+    
+//rest operators or parameters
+
+//example-1
+   
+function ad(a,...p){
+ 
+    console.log(a,p)
+}
+ad(2,3,4,5,6,7);
+
+//template literals
+
+let n1=100
+let n2=200
+
+let result=100+200
+//  In previous we have to using this type 
+// console.log('the result is'+" "+result)
+// console.log(`the result is 300`)
+
+//Now In these template literals we have to using  this type of literals
+
+console.log(`the result is ${result} ${result-400} `);
+
+/// default parameters
+function sum(amount,gst=9)
+{
+    console.log(amount*gst)
+}
+sum(10)
+</script>
+</html>

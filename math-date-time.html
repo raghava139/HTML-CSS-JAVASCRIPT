@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math-date-time-this-function constructor</title>
+</head>
+<body>
+    <input type='text'id='rnumber'><br>
+    <button type='submit'id='getOtp'>getOtp</button>
+</body>
+<script>
+    // Math
+    // date
+    // time
+    // this keyword
+    // constructor function
+
+//math
+// Math is a inbuilt method
+//math.floor
+//math.ceil
+//math.max
+//math.min
+//math.random
+
+//Math.floor()
+
+let x=68.1
+// let y=Math.floor(x)
+// console.log(y);
+
+
+//Math.ceil()
+let y=Math.ceil(x)
+console.log(y);
+
+//Math.max()
+let d=Math.max(32,43,33,98,101,54,76)
+console.log(d);
+
+//if i using this Math.max() for arrays-----to use that spread operator
+let array=[12,43,32,53,45,64,199]
+const value =Math.max(...array)
+console.log(value);
+
+//math.min()
+let p=Math.min(01,43,33,98,101,54,76)
+console.log(p)
+
+//math.random()
+let t=Math.floor(Math.random()*100000);
+console.log(t.toString());
+// if(t.toString().length<5)
+// {
+//     t*10;
+// }
+//to get otp using this random()
+const getOtp=document.getElementById('getOtp')
+getOtp.addEventListener('click',()=>{
+    const rnumber=document.getElementById('rnumber')
+    let t=Math.floor(Math.random()*100000);
+    if(t.toString().length<5)
+{
+    t*10;
+}
+    rnumber.value=t;
+  
+
+});
+///date and time
+//getdate()
+//getday()----
+//getFullYear()
+//getMonth()
+
+const completedata=new Date();
+console.dir(completedata);
+
+const day=completedata.getDay();
+console.log(day);
+
+const te=completedata.getDate();
+const year=completedata.getFullYear();
+const month=completedata.getMonth();
+const hours=completedata.getHours();
+const min=completedata.getMinutes();
+const ms=completedata.getMilliseconds();
+
+const la =(day)=>{
+    switch(day)
+    {
+        case 1:return 'monday';
+        case 2:return 'tuesday';
+        case 3:return 'wednesday';
+        case 4:return 'thursday';
+        case 5:return 'friday';
+        case 6:return 'satuarday';
+        case 7:return 'sunday';
+    }
+};
+
+console.log(`The day = ${la(day)}
+ date=${te} 
+ year=${year} 
+ month=${month+1}
+ hours=${hours}
+ minutes=${min}
+ milliseconds=${ms}`);
+
+
+
+</script>
+</html>

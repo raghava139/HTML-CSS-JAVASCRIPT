@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamci html</title>
+</head>
+<body>
+    <table>
+       <thead>
+        <tr>
+            <th>s.no</th>
+            <th>name</th>
+            <th>address</th>
+            <th>mobile number</th>
+        </tr>
+        </thead>
+        <tbody id='creativity'>
+            
+        </tbody>
+    </table>
+
+    
+    <script>
+    
+        var motion =[
+    {
+        id:"139",
+        name:"rajini",
+        mobileNumber: "969498494"
+    },
+    
+    {
+        id: "129",
+        name: "rajesh",
+        mobileNumber: "86963457394"
+    },
+    
+    {
+        id:"119",
+        name:"naresh",
+        mobileNumber:"7808083494"
+    
+    }
+    ]
+   var average =document.getElementById('creativity');
+   var dynamicHTML="";
+   for(var i=0;i<motion.length;i++)
+    {
+        dynamicHTML+="<tr>";
+        dynamicHTML+="<td>"+motion[i].id+"</td>";
+        dynamicHTML+="<td>"+motion[i].name+"</td>";
+        dynamicHTML+="<td>"+motion[i].mobileNumber+"</td>";
+        dynamicHTML+="</tr>";
+    }
+   average.innerHTML= dynamicHTML;
+    
+    </script>
+    </body>
+</html>

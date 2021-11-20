@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop down</title>
+</head>
+<body>
+
+
+        <label>
+            Enter Name of the state
+        </label>
+            <input type='text' placeholder="Enter the State"class='FistInput'id='FI'/>
+        <label>
+            <br>
+            <br>
+            Enter Name of the city
+        </label>
+            <input type='text' placeholder="Enter the city"class='SecondInput'id='SI'/>
+        <br>
+            <button id='myRecord'>Create Record</button><br>
+            <select name='state'>
+                <option value='ANDHRA PRADESH' id='AP'>ANDHRA PRADESH</option>
+                <option value='TELEGANA'id='TS'>TELEGANA</option>
+            </select>
+            <select name='city'>
+                <option value="" id='mOption'>city </option>
+                <option value=""id="sOption"></option>
+
+            </select>
+        <script>
+                var myAp=['tirupati','viyawada','kadapa']
+                var ap =document.getElementById('AP').value;
+
+                ap.addEventListener('click',function(){
+                    var myHtml="";
+                    // var option=document.getElementById('mOption')
+                    for(var i=0;i<myAp;i++)
+                    {
+                        myHtml+='<select>';
+                        myHtml+='<option>'+myAp[i]+'</option>'
+                        myHtml+='<option>'+myAp[i]+'</option>'
+                        myHtml+='<option>'+myAp[i]+'</option>'
+                        myHtml+='</select>';
+
+                    }
+                })
+                    myHtml.innerHtml=myAp;
+
+
+                    
+        </script>
+</body>
+</html>

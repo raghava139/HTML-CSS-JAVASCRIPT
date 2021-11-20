@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+</head>
+<style>
+    body{
+        background-image:url('https://cdn.pixabay.com/photo/2020/11/07/10/24/desert-5720527_960_720.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .main{
+        justify-content:center;
+        align-items:center;
+        padding:80px 80px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:30px;
+    }
+    .myform{
+    
+        align-items:center;
+        justify-content: center;
+
+    }
+    .form{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:30px;
+    }
+    #btn{
+        margin-left:9%;
+        margin-top:1%;
+        font-size:30px;
+        border-radius:10px;
+    }
+</style>
+<body>
+
+<div class='main'>
+    <form class='mform'method='post'>
+    <div class=form1>
+       <label>Username</label>
+       <input type='text'name='Username'placeholder='Enter your username'class="form"id="user">
+    </div>
+    <div id=form1>
+       <label>Email</label>
+       <input type='email'name='email'placeholder='Enter your email'class="form"id='email'>
+    </div>
+    <div id=form1>
+       <label>Mobile Number</label>
+       <input type='number'name='number'placeholder='Enter your Number'class="form"id='number'>
+    </div>
+    <div id=form1>
+       <label>Password</label>
+       <input type='password'name='pass'placeholder='Enter your password'class="form"id='password'>
+    </div>   
+    <div id=form1>
+       <label>Confirm password</label>
+       <input type='password'name='pass'placeholder='confirm passowrd'class="form"id='cpass'>
+    </div>
+    <div class=form2>
+     <button type='submit'value='register'id='btn'va class='button'>register</button>
+     </div>
+    </form>
+</div>
+<script>
+  var user=document.getElementById(user)
+  user.addEventListener('submit',function (e)
+  {
+    if(user.value==="")
+    {
+        alert('please enter your username');
+
+    }
+  });
+  console.log(e);
+</script>
+  
+</body>
+</script>
+</html>

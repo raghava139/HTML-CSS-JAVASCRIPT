@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this and constructor</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // object literal
+    let obj =
+    {
+        firstName:"raghava",
+        email:"raghava@gmail.com"
+    }
+    console.log(obj);
+
+    /// this and constructor function
+
+    function data(username,email,password,address)
+    {
+        this.username=username
+        this.email=email
+        this.password=password
+        this.address=address
+    }
+
+    let raghava=new data('raghava','yall@gmail.com',1234,'kadapa')
+    console.log(raghava);
+
+    let rajesh=new data('rajesh','rajesh@gmail.com',321234,'banglore')
+    console.log(rajesh);
+
+    let naresh=new data('naresh','naresh@gmail.com',42341,'vijayawada')
+    console.log(naresh);
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of ,for in,reduce</title>
+</head>
+<body>
+    
+    <script>
+        // for of loop
+
+                
+            let myLoop=['laptop','mobile','tv']
+            for(let myVariable of myLoop)
+            {
+                console.log(myVariable)
+            }
+
+        // for in loop 
+
+        let SecLoop ={
+            fb:'facebook',
+            ig:'instagram',
+            tt:'twitter',
+            GG:'Google'
+        }
+        // console.log(SecLoop.fb)
+        // console.log(SecLoop['ig'])
+
+        for(let myCreat in SecLoop)
+        {
+            console.log(myCreat)
+            // console.log(SecLoop[myCreat])
+
+        }
+        // Reduce method
+        let Values=[10,20,30,40,50,60]
+
+       let Correct= Values.reduce((previousValue,currentValue)=>{
+        //    console.log(previousValue)
+        //    console.log(currentValue)
+            return previousValue+currentValue;
+       })
+        console.log(Correct)
+
+        let Know=[10,20,30,40,30]
+       let yes=[]
+       Know.forEach((myMethod)=>{
+            // console.log(myMethod)
+            return yes.push(myMethod*2);
+        })
+    console.log(yes)
+
+
+    </script>
+</body>
+</html>

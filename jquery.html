@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery introduction</title>
+
+</head>
+<body>
+    <h1> this is heading of jquery</h1>
+    <div class='raghava'> this is my first div</div>
+    <span id='keyboard'>this is my span</span>
+
+
+    
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+         Veritatis soluta asperiores at deserunt aliquid blanditiis nobis assumenda, 
+         qui sequi, eligendi obcaecati nulla magni nesciunt minima? Enim explicabo rerum ad pariatur.
+    </p>
+
+    <div>this is second div</div>
+
+    <div>this is third div</div>
+
+    <a href='https://www.google.com'target="_blank">this is first link</a>
+    <a href='https://www.facebook.com'>this is second link</a><br>
+
+    <input type='button' value='submit'>
+    <input type='text' value='sometext'>
+    <input type='email' value='email'>
+    <input type='password' value='password'>
+    <input type='number' value='number'>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>JQUERY</li>
+        <li>JSON</li>
+    </ul>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>JQUERY</li>
+        <li>JSON</li>
+    </ul>
+
+
+
+    <button type='submit' id='buttonName'>button</button>
+    <input type='text' class='tname' value='textName'>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+
+    // selectors
+     $(document).ready(function(){
+            $('h1').css('color','red');
+            $('.raghava').hide('1000');
+            $('#keyboard').css('fontSize','100px');
+        });
+
+    // $(document).ready(function(){
+    //     $('ul li:first').click(function(){
+    //         $('ul li').hide('slow');
+    //     });
+    // });
+
+    $('p').css('color','green');
+    // $('*').css('color','red');
+    $('div:eq(2)').css('color','blue');
+    $('div:eq(2)').css('fontSize','80px');
+    $('a').css('fontSize','70px');
+    $('[href="https://www.google.com"]').css('color','red');
+    $('a[target="_blank"]').hide('5000');
+    $('a[target!="_blank"]').css('color','green');
+
+    $(':button').css('fontSize','50px');
+
+
+    $('ul li:nth-child(3)').css('color','red');
+    $('ul li:first-child').css('color','blue');
+    // $(*).css('backgroundColor','skyblue');
+
+
+    //Events
+    
+
+    //page events
+    //mouse events 
+    //keyboard events
+    //form events
+
+    //page events
+
+    //scroll
+    //load
+    //resize
+
+    //mouse events
+    //click
+    //dbclick
+    //mouse enter
+    //mouse leave
+    //mouse out
+    //mouse over
+    //mouse move
+    //context menu
+
+    //keyboard Events
+    
+    //keydown 
+    //keypress
+    //keyup
+
+    // form Events
+    
+    //onblur
+    //onfocus
+    //onfocus in 
+    //onfocus out
+    
+    // $('#buttonName').click(function(){
+    //     $('ul').hide('slow');
+
+    // });
+    
+    // $('#buttonName').dblclick(function(){
+    //     $('ul').hide('slow');
+
+    // });
+       
+//  $('#buttonName').hover(
+//         function()
+//     {
+//         $('ul').css('fontSize','100px');
+//     },
+
+//         function()
+//     {
+//         $('ul').css('fontSize','10px');
+//     }
+// );
+    
+
+    // $('.tname').keypress(function(){
+    
+    //     $('ul').hide('slow');
+
+    // });
+
+
+ $('.tname').focus(function(){
+    
+    $('a').css('color','yellow');
+
+});
+$('.tname').blur(function(){
+    
+    $('li').css('backgroundColor','blue');
+
+});
+$('.tname').change(function(){
+    
+    $('span').css('backgroundColor','skyblue');
+
+});
+$('.tname').contextmenu(function(){
+    
+    $('span').css('backgroundColor','green');
+
+});
+
+// $('.tname').focusout(function(){
+    
+//     $('span').css('backgroundColor','green');
+
+// });
+//all events can also be used in jQuery 
+
+</script>
+</html>

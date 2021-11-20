@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <img src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" id="img1"class='img1'>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIUhuNbhFpgxL9xKn5taJgL--tdER1O-_Fg&usqp=CAU" id="img2"class='img2'> -->
+    <!-- <div style='border:5px solid green;background-color:red;width:100px;height:500px;'id='raghava'>this is raghava </div> -->
+   <input type='text'id='userid'class='userid'placeholder='username'>
+   
+<script>
+    //page events:-
+   
+    //load events
+    //scroll events
+    //resize events
+
+
+//load events:
+    // var img1=document.getElementById('img1');
+    // var img2=document.getElementById('img2');
+    // img1.addEventListener('load',function(){
+    //     alert('the first img is loaded');
+    // });
+    // img2.addEventListener('load',function(){
+    //     alert('the second img is loaded');
+    // });
+
+//scroll events:
+ var img2=document.getElementsByClassName('img2');
+document.addEventListener('scroll',function(){
+    console.log(window.scrollY);
+    if(window.scrollY<=90)
+    {
+
+        img2.style.transform="rotate(" +window.scrollY+"deg)";
+    }
+});
+//resize events
+window.addEventListener('resize',function(){
+    console.log(window.innerWidth);
+    console.log(window.innerHeight);
+});
+// MOUSE EVENTS:
+
+// click
+// dbclick
+// mouse enter
+// mouse leave
+// mouse over
+// mouse out
+// mouse move
+// contextmenu
+// const raghava=document.getElementById('raghava');
+// raghava.addEventListener('contextmenu',function(e){
+
+  
+//     console.log(e)
+// });
+///keyboard events:
+
+//keydown
+//keyup
+//keypress
+document.addEventListener('keydown',function(e){
+    console.log(e.key);
+});
+
+//form events:
+//focus
+//blur
+//onchange
+
+
+
+
+
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <img src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" id="img1"class='img1'>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIUhuNbhFpgxL9xKn5taJgL--tdER1O-_Fg&usqp=CAU" id="img2"class='img2'> -->
+    <!-- <div style='border:5px solid green;background-color:red;width:100px;height:500px;'id='raghava'>this is raghava </div> -->
+   <form id=form-form>
+    <input type='text'placeholder='userid'>
+   <input type='password'placeholder='password'>
+</form>
+<script>
+    //page events:-
+   
+    //load events
+    //scroll events
+    //resize events
+
+
+//load events:
+    // var img1=document.getElementById('img1');
+    // var img2=document.getElementById('img2');
+    // img1.addEventListener('load',function(){
+    //     alert('the first img is loaded');
+    // });
+    // img2.addEventListener('load',function(){
+    //     alert('the second img is loaded');
+    // });
+
+//scroll events:
+ var img2=document.getElementsByClassName('img2');
+document.addEventListener('scroll',function(){
+    console.log(window.scrollY);
+    if(window.scrollY<=90)
+    {
+
+        img2.style.transform="rotate(" +window.scrollY+"deg)";
+    }
+});
+//resize events
+window.addEventListener('resize',function(){
+    console.log(window.innerWidth);
+    console.log(window.innerHeight);
+});
+// MOUSE EVENTS:
+
+// click
+// dbclick
+// mouse enter
+// mouse leave
+// mouse over
+// mouse out
+// mouse move
+// contextmenu
+// const raghava=document.getElementById('raghava');
+// raghava.addEventListener('contextmenu',function(e){
+
+  
+//     console.log(e)
+// });
+///keyboard events:
+
+//keydown
+//keyup
+//keypress
+// document.addEventListener('keydown',function(e){
+//     console.log(e.key);
+// });
+
+//form events:
+//focus
+//blur
+//onchange
+
+var password=document.querySelector('input[type="password"]');
+
+password.addEventListener('focus',function(event){
+
+    event.target.style.outlineColor='red';
+    event.target.style.color='blue';
+    console.log(event)
+});
+
+var password=document.querySelector('input[type="password"]');
+
+password.addEventListener('blur',function(event){
+
+    event.target.style.outlineColor='orange';
+    event.target.style.border='10px solid blue';
+
+    console.log(event)
+});
+
+</script>
+</body>
+</html>

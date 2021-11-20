@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    
+    <script>
+            //nested functions
+            // function Nmbers(a,b,c)
+            // {
+                
+            //     var x=  function(value){
+            //         console.log(value)
+            //     }
+                
+            //     let y=a+b+c
+                
+            //   x('myresult'+""+y)
+                
+            // }
+            // Nmbers(500,200,300)
+
+          
+
+            // // nested function
+            // // nested can access the parent function scope
+
+            // // 1.nested function is private to outer function(continainig function)
+
+            // // 2.nested function is can access the outer function scope
+            // you can access all the variable,functions,and arguments defined in outer function 
+            // in inner function you can acces the parent fucntion scope is known as lexical scope
+
+            // function multiplyNUmbes(a,b,c)
+            // {
+            //     function myResult(){
+            //         console.log(`result of total= ${OurTotal}`)
+            //     }
+            //     let OurTotal=a*b*c
+            //     myResult()
+            // }
+            // multiplyNUmbes(20,30,50)
+
+            // // closure
+            // The javascript keeps the memory alive and attches to the inner function
+
+        //example-1
+            //    function MyCounting()
+            //     {
+            //         let count=0;
+            //         var myIncrement=function()
+            //         {
+            //             return ++count;
+            //         }
+            //     return myIncrement;
+            //     }
+            //    counting= MyCounting()
+            //    console.log(counting())
+            //    console.log(counting())
+            //    console.log(counting())
+            //    console.log(counting()) 
+
+            // example-2
+
+            function Additon()
+            {
+                let a=10;
+                let b=20;
+                function Ho(){
+
+                    return a+b;
+                }
+              return Ho;
+            }
+
+             var x=Additon();
+             console.log(x())
+            
+
+         
+        
+               
+    </script>
+</body>
+</html>

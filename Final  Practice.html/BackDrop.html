@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backdrop</title>
+    <style>
+        .myClass
+        {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            background-color:rgba(0,0,0,0.6);
+            height:100%;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        .hello
+        {
+            
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+    <button type='button' id=mybtn>click ME</button>
+
+    <div class='myClass'>
+        <p>
+        <button class='hello'id='creatSol'>YES</button>
+        <button class='hello'id='mySystme'>Cancel</button>
+        </p>
+    </div>
+    <script>
+        var myBtn=document.getElementById("mybtn")
+        myBtn.addEventListener('click',Funct)
+        function Funct(event)
+        {
+           var x =document.querySelector('.myClass')
+           x.style.display='block'
+           
+        }
+        var y=document.getElementById('creatSol')
+       
+        y.addEventListener('click',function secondFunc(){
+            var z=document.querySelector('.myClass')
+                alert('form is submitted')
+                z.remove()
+        })
+        var k=document.getElementById('mySystme')
+       
+        k.addEventListener('click',function secondFunc(){
+            var z=document.querySelector('.myClass')
+                // alert('form is submitted')
+                z.remove()
+        })
+
+
+        // Funct();
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var,let and const</title>
+</head>
+<body>
+
+    <script>
+        //var, let and const
+
+        //1.var is global scope or functional scope
+        //2.you can Re-delcare the variable
+        //3.you can update the value
+        //4.you can use the console top of the 'var' keyword  you can get the 'undefined'
+       
+        //1. global scope
+        if(k=40){
+            var k=40
+        }
+        console.log(k);
+
+        // functional scope
+        function myFunc(){
+
+            var m=300;
+            console.log(m)
+            
+        }
+        myFunc();
+
+        //2. Re-declare
+        var h;
+        var h=5000;
+        console.log(h);
+
+        //3.you  update the value;
+        var y=1001;
+        var y='raghava';
+        console.log(y)
+       
+        //4.undefined
+        console.log(i)
+        var i=3000;
+
+    // II.)let 
+        // 1.It is block scope
+        // 2.you cannoot Re-declare the varaiable
+        // 3.you can update the value
+    
+        //1.block scope{}
+  
+        // function FirstONe()
+        // {   
+        //     let t='our stamina'
+            
+        // }
+        // console.log(t)
+
+          function FirstONe()
+        {   
+            let t='our stamina'
+            console.log(t)
+        }
+       
+
+        let lk='member'
+        if(lk='member'){
+            
+        }
+        console.log('it is available')
+       
+
+        FirstONe();
+
+        //2. cannot Redeclare
+        let u;
+        u='android'
+        console.log(u)
+       
+        //3.can update the value
+        
+        let p=300;
+        p=1000000;
+        console.log(p)
+
+
+        // const;   
+        // 1.It is also block scope
+        // 2.you cannot Redeclare the value 
+        // 3.ou cannot update the value
+        // 4.you can update the value in -- arrays,objects-- 
+        // 5.you cannot update the values in primittives like --- number, string ,boolean, undefined,null---
+
+        // 1. It is also block scope;
+       
+    //    function Lap(){
+    //          const Raghava='hero'
+           
+    //    }
+    //    console.log(Raghava)
+    //    Lap()
+
+        
+       function Lap(){
+             const Raghava='hero'
+             console.log(Raghava)
+       }
+       Lap()
+       
+       // 2. You cannot Re-declare the variable
+
+    //    you can not intialize
+    //    const mouse;
+
+       const mouse='device'
+       console.log(mouse)
+
+    //    3. you cannot update the value
+    // const Eyes='myEyes'
+    // const Eyes='ourEyes'
+
+    const Eyes='body'
+    console.log(Eyes)
+
+    // 4. but you can update the values in arrays , objects
+   
+    //   4. object updates in const
+       const myReal={
+           FirstName:'yallamanda'
+       }
+       myReal.FirstName='Raghavendra Yallamnda'
+       console.log(myReal)
+
+    //  Arrays updates in const
+       const A=['raghava','rajesh']
+
+       A.unshift('Raghavendra')
+       console.log(A)
+
+    //socpe chain
+       let Crime='grandparent';
+       console.log(Crime)
+        myScope=()=>{
+            if(Crime)
+            {
+                let Crime='parent'
+                console.log(Crime)
+            }
+            if(Crime)
+            {
+                 let Crime='child'
+                 console.log(Crime)
+            }
+        }
+        myScope();
+    </script>
+    
+</body>
+</html>

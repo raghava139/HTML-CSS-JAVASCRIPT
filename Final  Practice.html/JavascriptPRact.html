@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript interview questions</title>
+</head>
+<body>
+     <!-- <div id="parent">
+    <button id="child">Child</button>
+    <button id="child" onclick="event.stopPropagation()">Child</button>` -->
+  </div>
+  <h1 id='parent'>
+      Raghavendra
+      <button id='child'>myClick</button>
+      <!-- <button id='child' onclick="event.stopPropagation()">click me</button> -->
+  </h1>
+
+  <button id='mybtn'type='button'onclick=myData()>Get the data</button>
+  <h1 id='ourData'>  </h1>
+    <script>
+
+        // function add(x)
+        // {
+        //    return function(y)
+        //     {
+                
+        //         return function(z)
+        //         {
+        //             return x+y+z;
+        //         }
+        //     }
+        // }
+        // add(20)(30)(400)
+        // console.log( add(20)(30)(400))
+
+  
+
+    // display 5 times in hello world with delay of 2s
+         
+            // for(let i=1;i<=5;i++)
+            // {
+            //     ourOwn= setTimeout(function(){
+            //     if(i>5){ 
+            //       clearTimeout(ourOwn)
+            //   }
+            //         console.dir('hello world')
+
+            //     },3000)
+            // }       
+            
+            //  var add = (function () {
+            //         var counter = 0;// lexical scope
+            //         return function () {
+            //         //variable declared here local
+            //         counter += 1; 
+            //         return counter;
+            //         }
+            //         })();
+            
+            //         add();
+            //         add();
+            //         add();
+            //         console.log(add())
+                
+            // write code for add(2,3)=add(2)(3)?
+            //     function myAdd(a)
+            //     {
+            //        return function(b)
+            //         {
+             
+            //               return x=a+b;
+                        
+            //         }
+            //     }
+            //     myAdd(2)(3)
+            //     console.log(myAdd(2)(3))
+
+            //     function addition(a,b)   {
+            //         return c=a+b;
+            //     }
+            //     addition(2,3)
+            //     console.log(addition(2,3))
+            // var x= addition(2,3)==myAdd(2)(3)
+            // console.log(x)
+
+            // for in and for of
+            //for in 
+            // it is used for objects
+            // and also arrays and strings but it will show the keys of lists
+
+            // for  of 
+            // it  is used for arrays and objects
+            // and cannot use the objeects in for loop
+
+        // clone object in js?
+
+        // let myFirstObject={
+        //     firstName:'raghava'
+        // }
+        // let mySecondObject={
+        //     secondName:'yallamanda'
+        // }
+        // var myMergeObjeccts=Object.assign(myFirstObject,mySecondObject)
+        // console.log(myMergeObjeccts)
+        // console.log(myFirstObject)
+        
+
+        //  let myFirstObject={
+        //     firstName:'raghava'
+        // }
+        // let copyOBject=myFirstObject;
+      
+        // copyOBject.firstName='yallamanda'
+        // // myFirstObject.firstName='yallamanda'
+        // console.log(copyOBject)
+        // console.log(myFirstObject)
+       
+         // prototypically inheritance
+            //  var laptop={
+            //      myDell:'create'
+            //  }
+            //  var mobile={
+            //      myHp:'notCreate'
+            //  }
+              
+            //  mobile.__proto__ = laptop;
+            // console.log(mobile.myHp)
+          
+       
+        // array flattened
+        // let arr=[1,2,3,4,5,6,7,8,9,10]
+        // let flatArray = [].concat.apply([5,3,23423,3423], arr)
+        // console.log(flatArray)
+            // since the default depth is 1
+            // only the first level arrays in the parent array are flattend
+            // you would notice that there's a second level nesting after the number '4', in the parent array
+
+            // arr.flat();
+            // [ 1, 2, 3, 4, [ 5, 6, [ 7, 8 ], 9 ], 10, [ 11, 12 ] ]
+            // console.log(arr.flat(Infinity))
+               
+            // // concat and apply method();
+            // let arr = [[1, 2],[3, 4, [5, 6, [7, 8], 9]],[10, [11, 12]]];
+
+            // let Hours=[].concat.apply([500],arr)
+
+            // console.log(Hours.flat(2))
+
+            // // spread operator using concat the array methods
+
+            // let myWOrld= [[1, 2],[3, 4, [5, 6, [7, 8], 9]],[10, [11, 12]]];
+
+            // let Creativity=[100000].concat(...myWOrld)
+            // // console.log(Creativity)
+            // console.log(Creativity.flat(Infinity))
+
+
+            // // next using reduce method using concat the arrays
+
+            // let myNext=[[1, 2],[3, 4, [5, 6, [7, 8], 9]],[10, [11, 12]]];
+
+            // let MyFlattened=myNext.reduce((previous,present)=>{
+            //     return previous.concat(present)
+            // })
+            // // console.log(myNext)
+            // // console.log(MyFlattened)
+            // console.log(MyFlattened.flat(Infinity))
+            
+            // //Array.flat(Infinity)
+            // // array.flat()
+
+            // object flattened 
+// Declare an object
+// let ob = {
+// 	Company: "GeeksforGeeks",
+// 	Address: "Noida",
+// 	contact: +91-999999999,
+// 	mentor: {
+// 		HTML: "GFG",
+// 		CSS: "GFG",
+// 		JavaScript: "GFG"
+// 	}
+// };
+
+// // Declare a flatten function that takes
+// // object as parameter and returns the
+// // flatten object
+// const flattenObj = (ob) => {
+
+// 	// The object which contains the
+// 	// final result
+// 	let result = {};
+
+// 	// loop through the object "ob"
+// 	for (const i in ob) {
+//         // console.log(ob[i])
+
+// 		// We check the type of the i using
+// 		// typeof() function and recursively
+// 		// call the function again
+// 		if ((typeof ob[i]) === 'object' && !Array.isArray(ob[i])) {
+// 			const temp = flattenObj(ob[i]);
+// 			for (const j in temp) {
+//                 // console.log(i)
+//                 // console.log(j)
+//                 // console.log(temp)
+//                 // console.log(temp)
+// 				// Store temp in result
+// 				result[i + '.' + j] = temp[j];
+        
+// 			}
+// 		}
+
+// 		// Else store ob[i] in result directly
+// 		else {
+// 			result[i] = ob[i];
+// 		}
+// 	}
+// 	return result;
+// };
+
+// console.log(flattenObj(ob));
+
+
+// var myObj={
+//     Company: "GeeksforGeeks",
+//     Address: "Noida",
+//     contact: +91-999999999,
+//     mentor: {
+//         HTML: "GFG",
+//         CSS: "GFG",
+//         JavaScript: "GFG"
+//                 },
+//             }
+
+//             const NewObj=(myObj)=>{
+//                 let result={};
+//                 console.log(result)
+
+//                 for(const i in myObj)
+//                 {
+//                     if(typeof myObj[i]==='object' && !Array.isArray(myObj[i]))
+//                     {
+//                             const myTemp=NewObj[i]
+//                             console.log(myTemp)
+//                             for(const j in myTemp)
+//                             {
+//                             //   result[i+'.'+j]=myTemp[j]
+//                               alert('hello')
+                                
+//                             }
+//                             // console.log(result)
+                      
+//                     }
+//                     else
+//                     {
+//                         result[i]=myObj[i]
+//                     }
+//                 }
+//                 return result;
+//             }
+//             console.log(NewObj(myObj))
+
+
+
+//         let CreatOneObj={
+
+//             ProductName:'laptop',
+//             productdesign:'from Hcl company',
+//             Adrress:{
+//                 street:'bosenagar',
+//                 dist:'kadapa',
+//                 town:'rayachoty'
+//             }
+//         }
+//         // console.log(CreatOneObj)
+//     // var myValue=typeof(CreatOneObj)
+//     // console.log(myValue)
+
+
+//     const myVariable=(CreatOneObj)=>
+//     {
+//         let MyResult={}
+//         for(let i in CreatOneObj)
+       
+//         {
+//             // console.log(CreatOneObj[i])
+//             // console.log(CreatOneObj)
+//             if((typeof CreatOneObj[i]==='object')&& !Array.isArray(CreatOneObj[i]))
+        
+//             {
+                    
+//                 // console.log(CreatOneObj[i])
+//                 let Temperature=myVariable(CreatOneObj[i])
+//             //    console.log(Temperature)
+
+//                 for(let j in Temperature)
+//                 {
+//                     // console.log(j)
+//                    MyResult[i+'.'+j]=Temperature[j]
+                
+//                 }
+               
+//             }
+//             else{
+//                var OUrresutl= MyResult[i]=CreatOneObj[i]
+//             //    console.log(myResult[i])
+//             }
+           
+//         }
+//         return MyResult
+//     }
+//    console.log(myVariable(CreatOneObj))
+    
+   
+    // call() apply() vs bind()
+    // call()
+
+
+    // first method
+
+//     let OurObj ={
+//         firstName:"Raghava",
+//         SecondName:'yallamanda',
+//         // address={
+//         //     hello:1,
+//         //     really:'correct'
+//         // },
+
+//         ourRealContent:function(){
+
+//             return this.firstName+''+this.SecondName+""
+//         }
+//     }
+
+//    var y= OurObj.ourRealContent();
+//    console.log(y)
+
+// second MEthod
+
+// let ourOBject={
+//     fullName:function()
+//     {
+//         return this.firstName+''+this.SecondName
+//     }
+// }
+// let ourSecondObj={
+//     firstName:"Raghava",
+//         SecondName:'yallamanda',
+//         // address={
+//         //     hello:1,
+//         //     really:'correct'
+//         // },
+// }
+// let Copy={
+//     firstName:"rajesh",
+//         SecondName:'yallamanda',
+//         // address={
+//         //     hello:1,
+//         //     really:'correct'
+//         // },
+// }
+// ourOBject.fullName.call(Copy)
+// console.log(ourOBject.fullName.call(ourSecondObj))
+// console.log(ourOBject.fullName.call(Copy))
+
+
+// THird MEhtod
+
+
+// let ourOBject={
+//     fullName:function(firstString,secondString)
+//     {
+//         return this.firstName+''+this.SecondName+""+firstString+""+secondString
+//     }
+// }
+// let ourSecondObj={
+//     firstName:"Raghava",
+//         SecondName:'yallamanda',
+//         // address={
+//         //     hello:1,
+//         //     really:'correct'
+//         // },
+// }
+// let Copy={
+//     firstName:"rajesh",
+//         SecondName:'yallamanda',
+//         // address={
+//         //     hello:1,
+//         //     really:'correct'
+//         // },
+// }
+// // ourOBject.fullName.call(Copy)
+// console.log(ourOBject.fullName.call(ourSecondObj,'first','second'))
+// console.log(ourOBject.fullName.call(Copy,'hello','bye'))
+
+// apply MEthod
+// var x=
+// {
+//     fn:'ragh',
+//     lN:'avendra'
+// }
+// var y=
+// {
+//     fn:'ragh',
+//     lN:'avendra'
+// }
+// var z=
+// {
+//     fullname:function(String){
+//         return String+this.fn+this.lN
+//     }
+// }
+
+// z.fullname.apply(y,['myString'])
+// console.log(z.fullname.apply(y,['myString']))
+
+// bind MEthod
+// var x=
+// {
+//     fn:'ragh',
+//     lN:'avendra'
+// }
+// var y=
+// {
+//     fn:'ragh',
+//     lN:'avendra'
+// }
+// var z=
+// {
+//     fullname:function(String,SecondString){
+//         return String+this.fn+this.lN+SecondString
+//     }
+// }
+
+// var hello=z.fullname.bind(y,['this'],'secondS')
+// // console.log(z.fullname.bind(y,['this'],'secondS'))z
+// hello()
+// console.log(hello())
+
+var parent = document.getElementById('parent');
+
+      parent.addEventListener('click', function(){
+        console.log("Parent clicked");
+      });
+
+    var child = document.getElementById('child');
+ 
+      child.addEventListener('click', function(){
+        console.log("Child clicked");
+      });
+
+// //sorting objects in javascript
+//       let myWOrld=[{
+        
+//           myName:'raghavendrajewl',
+//           firstName:'raghava',
+//           secondName:'yallamanda',
+//           actor:'hro',
+//           z:'rhlajdl',
+//       }]
+
+//       let hello=myWOrld.sort(function(a,b){
+//           return a-b;
+//       })
+//       console.dir(hello)
+var items = [
+  { name: 'Edward', value: 21 },
+  { name: 'Sharpe', value: 37 },
+  { name: 'And', value: 45 },
+  { name: 'The', value: -12 },
+  { name: 'Magnetic', value: 13 },
+  { name: 'Zeros', value: 37 }
+];
+
+// sort by value
+items.sort(function (a, b) {
+  return a.value - b.value;
+});
+console.log(items)
+
+// // sort by name
+// items.sort(function(a, b) {
+//   var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+//   var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+//   if (nameA < nameB) {
+//     console.log('ok')
+//     return -1;
+   
+//   }
+//   if (nameA > nameB) {
+//       console.log('not ok')
+//     return 1;
+//   }
+
+//   // names must be equal
+//   return 0;
+// });
+
+
+// let myArr=[30,40,404,32023,42523,2234]
+//     let myNAM=myArr.sort(function(a,b)
+//     {
+//         return b-a;
+//     })
+//     console.log(myNAM)
+
+//     let myValue=[30,40,50,20,199]
+//     myValue.reverse()
+//     console.log(myValue)
+
+// let myObjets=[
+// {
+//     Name:'Raghavendra',
+//     id:425 
+// },
+// {
+//     Name:'Rajesh',
+//     id:428
+// },
+// {
+//     Name:'Naresh',
+//     id:408
+// },
+// {
+//     Name:'Dinesh',
+//     id:585
+// },
+// ]
+
+// let Mylap=myObjets.sort(function(a,b){
+
+//     return a.id-b.id;
+
+// });
+// console.log(Mylap)
+
+// let ourName=myObjets.sort(function(x,y){
+
+//     let Name1=x.Name
+//     let Name2=y.Name
+//     if(Name1<Name2){
+//         return -1
+//     }
+//     if(Name1>Name2)
+//     {
+//         return 1
+//     }
+//     return 0;
+// })
+// console.log(ourName)
+
+            // create a javascript object
+
+            // 1.object literals
+            // 2.object constructor 
+            // 3.object class constructor(es6)
+            // 4.object .create method()
+
+            // 1.object literals
+        
+            let MyOBJ={
+                Fn:'raghava',
+                Sn:'yallamanda',
+            }
+            console.log(MyOBJ)
+
+            //2.object constructor function
+
+            // function hello (firstName,SecondName,year)
+            // {
+            //     this.FName=firstName;
+            //     this.SName=SecondName;
+            //     this.MyYear=year;
+            // }
+            // let creatOBj= new hello('Laptop','dell',2020)
+            // console.log(creatOBj)
+            // es6 classes
+
+            // class user{
+            //     constructor(realName,duplicatName)
+            //     {
+            //         this.RName=realName
+            //         this.DName=duplicatName
+            //         this.getName=function(){
+
+            //             return this.realName+""+this.duplicatName
+            //         }
+            //     }
+            // }
+            // var User1=new user('raghava','raghavendra')
+            // console.log(User1)
+
+
+            // object.create method()
+
+            // let MEhtodObj={
+            //     laptop:'dell',
+            //     mobile:'mi',
+            //     watch:'fastrack',
+            //     mainFunc:function(){
+            //             return this.laptop+""+this.mobile+""+this.watch
+            //     }
+            // }
+            // // console.log(MEhtodObj)
+            // let OUrMEhto=Object.create(MEhtodObj)
+            // OUrMEhto.laptop='lenovo'
+            // OUrMEhto.mobile='samsung';
+            // OUrMEhto.watch='Ronaold'
+            // console.log(OUrMEhto)
+       
+        // what is the following output code:
+          //1.)
+        // const arr=[12,343,423,234]
+
+        //       for(var i=0;i<arr.length;i++)
+        //       {
+        //         setTimeout(function(){
+        //           // console.log('index:'+i+""+arr[i])//index:4 undefined
+        //         },3000)
+        //       }
+           //2.)
+          //     console.log(0.1 + 0.2);//0.30000000000000004
+          // // console.log(0.1 + 0.2 == 0.30000000000000004);//true
+          // console.log(0.1 + 0.2 == 0.3);//false
+
+          // function myFu() {
+          //   console.log(1); 
+          //   setTimeout(function(){console.log(2)}, 1000); 
+          //   setTimeout(function(){console.log(3)}, 0); 
+          //   console.log(4);
+          // }
+          //   myFu()
+
+          // map functiON()
+            // let main = [2, 3, 5, 7]
+            // main.map(function(element, index, array){
+            //     // console.log(element);
+            //     // console.log(index);
+            //     console.log(array);
+            //     return element;
+            // }, 80);
+
+            // let may=[20,30,40,50]
+
+            // let double = may.map((myDouble)=>{
+            //   return myDouble*2
+            // })
+            // console.log(double)
+            // // let double = may.map(myDouble=>myDouble*2)   
+
+            // function replace(a,index,val){
+            //   a.splice(index,1,val);
+            //   return a; 
+            //   }
+            // var x=[1,2,3,4,5];
+            // console.log(replace(x,2,29))
+            // program to check the number of occurrence of a character
+// function countString(str, letter) {
+//  let count = 0; // looping through the items
+//  for (let i = 0; i < str.length; i++) { // check if the character is at that position
+//  if (str.charAt(i) == letter) {
+//    console.log(string.charAt(i))
+//  count += 1;
+//  }
+//  }
+//  return count;
+// } // take input from the user
+// const string = prompt('Enter a string: ');
+// const letterToCheck = prompt('Enter a letter to check: ');//passing parameters and calling the function
+
+//  const result = countString(string, letterToCheck);// displaying the result
+// console.log(result);
+
+              const people = [
+              { 
+              id:10021,
+              name: 'Anna', 
+              email: 'anna@greatcompany.com',
+              }, { 
+              id:10022,
+              name: 'Riley', 
+              email: 'riley@greatcompany.com',
+              }, {
+              id:10023,
+              name: 'Nathan', 
+              email: 'nathan@greatcompany.com',
+              }, {
+              id:10024,
+              name: "Jessica",
+              email: 'jessica@greatcompany.com',
+              }];
+              
+              const jobs = [
+              { 
+              id:10021,
+              title: 'Engineer'
+              },{
+              id:10022,
+              title: 'Quality Assurance'
+              },{
+              id:10023,
+              title: 'Product Owner'
+              }];
+              
+              const mergedWorkers = [];
+              for(let peo of people){
+                // console.log(peo)
+              let flag=false
+              // console.log(flag)
+              for(let job of jobs){
+                // console.log(job)
+              if(peo.id === job.id){
+              mergedWorkers.push({...peo, ...job});
+              flag=true;
+              break;
+              }
+              }
+              if(!flag)
+              mergedWorkers.push({...peo});
+              }
+              console.log(mergedWorkers);
+
+
+          // template literals
+          let myGrade='raghavendra'
+          console.log(`myname is : ${myGrade}`)
+
+      // es6 in set()
+          // let myset=new Set()
+          // // console.log(myset)
+          // myset.add(1323)
+          // // console.log(myset)
+          // myset.add('raghava')
+          // console.log(myset)
+          // myset.add('rajesh')
+          // console.log(myset)
+          // myset.add({
+          //   first:'hello',
+          //   wait:1343
+          // })
+          // console.log(myset)
+
+          // myset.add('myCUlt')
+          // console.log(myset)
+        
+
+          // function generator()
+
+          // function* myGenerate(i)
+          // {
+          //     yield i;
+          //     yield i+10;
+          //     yield i+12;
+          //     yield i+50
+          // }
+          
+          // const OurGen=myGenerate(102)
+          // console.log(OurGen.next().value)
+          // console.log(OurGen.next().value)
+          // console.log(OurGen.next().value)
+          //  console.log(OurGen.next().value)
+      // myGenerate()
+   
+
+      // destructing assignment
+
+    // let myDes=[100,200,300,400]
+
+    // let[a,,,d]=myDes
+    // console.log(a,d)
+
+    // let MyDest={
+
+    //   myName:'raghava',
+    //   myId:1
+    // }
+
+    // let {myName,myId}=MyDest;
+    // console.log(myName,myId)
+
+    let Nested={
+
+        Product:1,
+        color:'red',
+        cash:1000000,
+        MyAddress:{
+
+          street:'bosenagar',
+          dist:'kadapa',
+          town:'rayachoty',
+
+        }
+}
+let{cash}=Nested;
+console.log({cash})
+
+let{MyAddress:{street}}=Nested;
+console.log({street})
+    // XMLHttpRequest
+
+   function myData()
+    {
+      let MyHttpData=new XMLHttpRequest();
+     
+    
+      MyHttpData.onreadystatechange=function()
+      {
+        if((this.readyState==2)&&(this.status==200))
+        console.log(this.readyState)
+        console.log(this.status)
+        {
+            document.getElementById('ourData').innerHTML=this.responseText
+            // console.log(this.responseText)
+        }
+      }
+      MyHttpData.open('GET','https://jsonplaceholder.typicode.com/posts',true)
+      MyHttpData.send();
+      // console.log(MyHttpData.send())
+      console.log(MyHttpData)
+    }
+    myData()
+              
+    </script>
+
+</body>
+</html>

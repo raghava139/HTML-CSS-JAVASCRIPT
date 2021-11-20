@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closest method</title>
+</head>
+<body>
+    <div class='rag'>
+        <div id='mydiv'>
+            <p id='mypara'> 
+                this is mainpararaph
+            </p>
+         </div>
+    </div>
+    <section class="hero">
+        <div id='hero1'>
+            <h class="raw">
+            this is raw</h>
+            <p class='myhero'>this is my hero</p>
+        </div>
+      </section>
+      <div id='wh'>
+            <div clas='new'>this is my new div</div>
+    </div>
+        
+    </section>
+    <SCRIPT>
+    //closest
+        const rag=document.querySelector('#mypara');
+        console.log(mydiv.closest('#mydiv'));
+
+        const hero=document.querySelector('.raw');
+        console.log(hero.closest('.raw'))
+
+        const h=document.querySelector('.myhero');
+        console.log(hero1.closest('.hero'));
+        
+        const l=document.querySelector('.new');
+        console.log(wh.closest('#wh'))
+        
+        </SCRIPT>
+</body>
+</html>

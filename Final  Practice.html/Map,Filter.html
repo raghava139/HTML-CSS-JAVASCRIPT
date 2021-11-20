@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+
+    <script>
+        let x=[100,200,300,400,500]
+
+       let y= x.map((element,index)=>{
+        //    console.log(index)
+        //    console.log(element)
+        //    console.log(array)
+            return element*3;
+        })
+        console.log(y);
+    let myFilter=[100,200,300,400,500]
+
+    let quit=myFilter.filter((myWorld)=>{
+       return myWorld > 100;
+    })
+    console.log(quit)
+
+    let ourMap=['raghava','rajesh','naresh','surya']
+
+    let ourValue=(allELements)=>{ return allELements}
+    let myMap=ourMap.map(ourValue)
+    console.log(myMap)
+
+    </script>
+    
+</body>
+</html>

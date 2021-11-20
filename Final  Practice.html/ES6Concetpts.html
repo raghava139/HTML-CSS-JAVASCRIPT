@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es6 concepts </title>
+</head>
+<body>
+    
+    <script>
+        // es6 concepts
+            // let and const
+            // Promises
+            // destructuring
+            // arrowfunction
+            // rest and spread operator
+            // template literals
+            //  default parameters
+            //  class
+
+        // destructuring
+        
+        let x=[100,200,300,400,500,600,700]
+
+        let y=x[0]
+        let z=x[x.length-1]
+        console.log(y)
+        console.log(z)
+
+        let hello=['raghava','Naresh','rajesh','dinesh','mahesh']
+        var [a,,c,,e]=hello
+        console.log(a,c)
+
+        const myObj={
+            firstName:'raghava',
+            secondName:'yallamanda',
+            email:'styleraghava@gmail.com',
+            address:{
+                street:{
+                    raghava:'myFirstName',
+                    rajesh:'dfajdl',
+                },
+                number:403230942,
+            }
+        }
+
+        let {firstName,secondName,email}=myObj 
+        console.log(firstName+secondName+email)
+        let {address:{street:{raghava}}}=myObj;
+        console.log(raghava)
+        
+        // let myWorld=[100,200,300,400,500,600]
+
+        // let Get=myWorld[0]+myWorld[myWorld.length-1]
+        // console.log(Get)
+
+        // let ourArrays=['dell','hp','lenovo']
+
+        // let[j,k,l]=ourArrays
+        // console.log(j)
+
+
+        // Template Literals
+
+        //  let id=139
+        //  let college='aits'
+        //  let branch='civil Engineering'
+        //  let myCalc=35000
+        //  let OurCalc=15000
+  
+        // console.log('id'+id+'college'+college+'branch'+branch) // Previous Method some times its thrown an Error
+       
+        // console.log(`
+        // id: ${id}
+        // college:${college} 
+        // branch:${branch}
+        // fees:${myCalc+OurCalc}`)
+
+      
+        // spread and rest Operator
+        // syntax---->   (...)
+      
+        // spread operator
+        //using arrays and object literals
+        
+        // To spread Arrays
+        let FirstArray=[100,300,500,700]
+        let SecondArr=[900,1100,1300]
+        let ThirdArr=[1500,1700,1800,2000]
+        
+        let TotalSpread=[...FirstArray,...SecondArr,...ThirdArr,1300000]
+        console.log(TotalSpread)
+
+        //object literals
+
+        let myDetails={
+                laptop:1,
+                Name:'lenovo',
+                Money:50000
+        }
+        console.log(myDetails)
+
+        let myUpdatedDetails={
+            ...myDetails,
+                year:2021,
+                color:'red'
+        }
+        console.log(myUpdatedDetails)
+        // updating by using spread operator
+        console.log({...myUpdatedDetails,color:'green'})
+        
+        // Rest operator
+
+        function sum(X,Y,...param)
+        {
+                console.log(X,Y,param)
+                console.log(param)
+        }
+        sum(20,30,30,40,50)
+
+        // Default Parameters
+
+        function myParam(total,Fees=10)
+
+        {
+            let myTotal=total+Fees
+            console.log(myTotal)
+        }
+        myParam(5000,2)
+      
+
+    </script>
+</body>
+</html>

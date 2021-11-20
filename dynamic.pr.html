@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamci Html</title>
+</head>
+<body>
+  <thead>
+    <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>username</th>
+        <th>email</th>
+        <th>address</th>
+    </tr>
+  </thead> 
+  <tbody id='crd'>
+
+  </tbody>
+<script>
+        var mil=[
+  {
+      id :'1393',
+      name:'ragahva',
+      username:'raghava23',
+      email:'stylegmail.com'
+  },
+  {
+      id :'1433',
+      name:'ragahva',
+      username:'naresh23',
+      email:'resh@gmail.com'
+  }
+];
+        
+        var dd=document.getElementById('crd')
+        var dynamicHTML="";
+        for(var i=0;i<mil.length;i++)
+        {
+            dynamicHTML+='<tr>';
+            dynamicHTML+='<td>'+mil[i].id+'</td>';
+            dynamicHTML+='<td>'+mil[i].name+'</td>'  ;
+            dynamicHTML+='<td>'+mil[i].username+'</td>'  ;
+            dynamicHTML+='<td>'+mil[i].email+'</td>';
+            dynamicHTML+='</tr>';
+        }
+        dd.innerHTML=dynamicHTML;
+    </script>
+</body>
+</html>

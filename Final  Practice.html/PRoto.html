@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proto</title>
+</head>
+<body>
+
+
+    <script>
+        function myName(firstnam,secondname,age){
+                this.fN=firstnam;
+                this.Sn=secondname;
+                this.myAge=age;
+                // this.fullDetails=function
+        }
+        myName()
+        console.log(myName())
+
+        var myOobj=new myName('raghava','harish',22)
+        myOobj.firstnam='rajesh'
+        console.log(myOobj.firstnam)
+        var secondOBj=new myName('ldj','lkasdsjflj',33)
+        console.log(secondOBj)
+
+        // let Obj1={
+        //     laptop:'dell',
+        //     color:'black',
+        // }
+        // let Obj2={
+        //     mobile:'mi',
+        //     color:'red'
+        // }
+        // Obj1._proto_=Obj2
+        // console.log(Obj1)
+        // console.log(Obj2)
+    </script>
+</body>
+</html>

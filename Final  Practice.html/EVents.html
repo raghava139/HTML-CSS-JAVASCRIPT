@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+           <!-- page Events
+                mouse events 
+                form events
+                keyaboard Events -->
+
+                <h1> hello</h1>
+                <p>Resize the browser window to fire the <code>resize</code> event.</p>
+                <span>height : <span id='height'></span></span>
+                <span>width  : <span id='width'></span></span>
+
+            <form>
+                <input type='text' id='mainInput' onfocus=myFocs() onblur=myBlur() onchange=myChange(this.value) oninput=myInput()>
+                <input type='submit' id='mainInput'>
+                <input type='text' id ='Keyinput'onkeydown=FirstKey() onkeyup=secondKey() onkeypress="displayResult()" />
+            </form>
+                <p id='myPara'> </p>   
+                <p id='secondPara'> </p>   
+                
+                <button onclick='myClick()' ondblclick='mydbClick()' type='button'> click me</button>
+        <script>
+
+            // Page Events
+            
+
+            //DomContentLoaded
+           // beforunload 
+            // unload
+            // load
+            // scroll
+            // size
+            // load
+
+        //     addEventListener('DOMContentLoaded', (event) => {
+        //     console.log('The DOM is fully loaded.');
+        // });
+        // addEventListener('load', (event) => {
+        //     console.log('The page is fully loaded.');
+        // });
+        // addEventListener('beforeunload', (event) => {
+        //     // show the confirmation dialog
+        //     event.preventDefault();
+        //     // Google Chrome requires returnValue to be set.
+        //     event.returnValue = '';
+        // });
+        // addEventListener('unload', (event) => {
+        //     // send analytic data
+        // });
+
+        // addEventListener('scroll',(e)=>{
+
+        //     console.log('scrolling')
+        // })
+
+
+        // size
+    //     var myHeight=document.getElementById('height')
+    //     var myWidth=document.getElementById('width')
+
+
+    //    window.addEventListener('resize',myFunc())
+    //         function myFunc(){
+
+    //             myHeight.textContent=window.innerHeight;
+    //             myWidth.textContent=window.innerWidth;
+    //         }
+    //         window.onresize =myFunc;
+
+    // Form Events
+
+    //focus
+    //blur
+    //change
+    //input
+    //submit
+
+        // focus
+
+
+        function myFocs()
+        {
+            document.getElementById('mainInput').style.background='green'
+        }
+
+
+        // blur
+        function myBlur()
+        {
+            document.getElementById('mainInput').style.background='yellow'
+        }
+
+
+        // onChange
+        // function myChange(myVal)
+        // {
+        //    console.log(myVal)
+        // }
+
+
+
+        // oninput
+        function myInput()
+        {
+               var inp = document.getElementById('mainInput').value
+            var my=document.getElementById('myPara').innerHTML= inp;
+        }
+
+        // keyboard Events
+
+        //keydown 
+        //keypress
+        //keyup
+
+        // keydown
+
+        function FirstKey()
+        {
+            document.getElementById('secondPara').innerHTML='keydown'
+        }
+        function secondKey()
+        {
+            document.getElementById('secondPara').innerHTML='keyup'
+        }
+        function displayResult()
+        {
+            document.getElementById('secondPara').innerHTML='keypress'
+        }
+
+        // click and double click event
+        
+        // function myClick()
+        // {
+        //     alert('clicked')
+        // // }
+        // function mydbClick()
+        // {
+        //     alert('double clicked')
+        // }
+
+
+
+        
+
+        
+    
+
+        </script>
+</body>
+</html>

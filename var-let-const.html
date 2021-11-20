@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var let const</title>
+</head>
+<body>
+    <script>
+// var
+var b 
+b=1900;
+function right(){
+   var a=10;
+   console.log(a); 
+   if(true){
+       var a=20;
+       console.log(a); 
+   }
+
+}
+right();
+console.log(b);
+//let and const
+//let 
+let mouse;
+mouse="memory"
+console.log(mouse);
+function key()
+{
+  
+    if(mouse){
+    let price=500;
+    console.log(price);
+    }
+    let rate=1000;
+    console.log(rate);
+}
+key();
+//const
+const windows='demo';
+
+//these are incorrect statements
+// const windows='del';
+// windows='zone'
+
+console.log(windows);
+//The difference between var,let and const
+
+
+//var 
+
+// Variable is a global scope or functionscope
+// we can redeclare the var
+//  we can access the dat
+// The scope of a JavaScript variable declared with var is its current execution context.
+// The scope of a JavaScript variable declared outside the function is global.
+
+// let
+
+// They are introduced on ES6.
+//we can't redeclare.
+//block scope variable.
+//we can update the value 
+//The let statement declares a local variable in a block scope. 
+//It is similar to var, in that we can optionally initialize the variable.
+//The let statement allows you to create a variable with the scope limited to the block on which it is used.
+
+//const
+//They are introduced on ES6.
+//block scope variable.
+//we cann't update the value.
+//we cann't redeclare.
+
+//scope chain
+let someVal="global"
+console.log(someVal);
+if(true){
+    let someVal="some text"
+    console.log(someVal);
+    if(true){
+        let someVal='some para'
+        console.log(someVal);
+    }
+}
+// Scope chains establish the scope for a given function. 
+// Each function defined has its own nested scope.
+// Any function defined within another function has a local scope which is linked to the outer function.
+
+
+//object chain
+
+var inForm=
+    {
+        name:"naresh",
+        age:"23",
+        college:"aits",
+        rollno:"139",
+    //    mobile:{
+    //         no1:"9676324174",
+    //         no2:"9398280671",
+    //     }, 
+        addrees:{
+            street:'bosenagar',
+            town:"rayachoty",
+            district:"kadapa",
+        },
+};
+console.log(inForm?.mobile?.no1);
+</script>
+</body>
+</html>

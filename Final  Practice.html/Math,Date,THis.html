@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math, date,time, this,constructor function</title>
+</head>
+<body>
+    <input type='text'class=myText id='myText'/>
+    <button type='submit'class='btn'id='btn'>get Otp</button>
+    <script>
+            // math.floor
+            // math.ceil
+            // math.max
+            // math.min
+            // math.random
+
+            // Math.floor
+            // downside value
+            let x=100.34
+            let y=Math.floor(x)
+            console.log(y)
+            
+            //math.floor
+            //upside value
+            let z=Math.ceil(x)
+            console.log(z)
+
+            //Math.max
+            // let hello=Math.max(200,300,400,500,700)
+            // // console.log(hello)
+            // let myArray=[10000,20000,30000,50000,600000]
+            // // console.log(myArray)
+            // let ourMaxValue=Math.max(...myArray);
+            // console.log(ourMaxValue);
+
+            // let ourMinValue=Math.min(...myArray);
+            // console.log(ourMinValue);
+            
+            // let SomeRandomValue=Math.floor(Math.random()*1000000)
+            // // console.log(SomeRandomValue.toString().length)
+            //     if(SomeRandomValue.toString().length<6)
+            //     {
+            //         SomeRandomValue*10;
+                    
+            //     }
+            //     console.log(SomeRandomValue)
+            var Otp=document.getElementById('btn')
+            Otp.addEventListener('click',()=>{                  
+            const SomeRandomValue=Math.floor(Math.random()*1000000)
+            // console.log(SomeRandomValue.toString().length)
+                let Search=document.getElementById('myText')
+                if(SomeRandomValue.toString().length<6)
+                {
+                    SomeRandomValue*100;
+                }
+                Search.value=SomeRandomValue
+                console.log(SomeRandomValue.toString())
+               
+            });
+
+            // date and time
+            const myRealDate=new Date()
+            console.dir(myRealDate)
+
+            const myDay=myRealDate.getDay()
+         
+            const myDate=myRealDate.getDate()
+
+            const FullYear=myRealDate.getFullYear()
+
+            const myHours=myRealDate.getHours()
+
+            const Minutes=myRealDate.getMinutes()
+
+            const Mm=myRealDate.getMilliseconds()
+
+            const time=myRealDate.getTime()
+
+            const Month=myRealDate.getMonth()
+      
+        
+            const SearchDay=(myDay)=>{
+                switch(myDay)
+                {
+                    case 1:
+                    return 'monday'
+                    // break;
+                   
+                    case 2:
+                    return 'tuesday'
+                    // break; 
+                    
+                    case 3:
+                    return 'wednesday'
+                    // break;
+                    
+                    case 4:
+                    return 'thursday'
+                    break;
+                    
+                    case 5:
+                    return 'friday'
+                    // break; 
+                    case 6:
+                    return 'satuarday'
+                    // break;
+                  
+                    default:
+                    break;
+                }
+            }
+
+            // console.log(`day :${SearchDay(myDay)}
+            //             date:${myDate}
+            //             Year:${FullYear}
+            //             Hours:${myHours}  minutes:${Minutes}  ms:${Mm}
+            //             time:${time}
+            //             month:${Month+1} `)
+
+            // this keyword
+
+            // it is a keyword
+            // which points to current object
+
+            console.log(this)
+
+            // function constructor
+
+            function myObject(FirstName,LastName,Year,Branch,college){
+
+                this.Name1=FirstName;
+                this.Name2=LastName;
+                this.Duaration=Year;
+                this.Specilization=Branch;
+                this.MyCollege=college;
+            }
+
+            var Person1=new myObject('yallamanda','raghavendra',2020,'civil','aits')
+            console.log(Person1)
+            
+            var Person2=new myObject('yallamanda','Rajeshbabu',2016,'mech','srisai')
+            console.log(Person2)
+
+    </script>
+</body>
+</html>

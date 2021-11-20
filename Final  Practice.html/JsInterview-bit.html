@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interview bit JavaScript questions</title>
+</head>
+<body>
+        
+
+    <script>
+        //  1.What are the different data types present in javascript?
+
+        // Primitive Types
+        // String,number,boolean,undefined,null,bigInteger
+
+        console.log(typeof('raghava'))//string
+        console.log(typeof(39))//number
+        console.log((typeof(true)))//boolean
+
+        let x;
+        console.log((typeof(x)))//undefined
+        let y=null;
+        console.log(typeof(y))//null
+
+        let z=56465456464646464654654646489497798465494741465494179651944n;
+        console.log(typeof(z))//bigint
+
+        // non-primitive types
+        var array1 = [5, "Hello", true, 4.1];
+        console.log(typeof(array1))
+
+        var obj1 = {
+                    x:  43,
+                    y:  "Hello world!",
+                    z: function(){
+                        return this.x;
+                    }
+                }
+                console.log(typeof(obj1))
+
+
+        // 2.Explain hoisting
+        // you can access or call the function declaration and variables before it declaration
+
+//variables
+        console.log(hoisting)
+        var hoisting=10;
+
+// function declaration
+        Declarationg()
+        function Declarationg()
+        {
+            var myDeclar=100
+            console.log(myDeclar)
+        }
+
+
+// function expression
+// // it will not access in function expression
+// Expression()
+//         var Expression=function()
+//         {
+//             var EXp=343;
+//             console.log(EXp)
+//         }
+
+        // difference between == and ===?
+                var assing='10'
+                if(assing==10)
+                {
+                    console.log('corr')
+                }
+                else
+                {
+                    console.log('not correct')
+                }
+        //implicity of coercion 
+            // string,boolean,equality
+            var myValue=10;
+            var SecondValue='20';
+            console.log(myValue+SecondValue)
+
+        // isNaN
+        let NUM=10;
+        let how="ragahva"
+        console.log(isNaN(NUM))
+        console.log(isNaN(how))
+
+// passed by value and passed by reference
+
+// var first=200;
+// var secnd=first;
+// secnd=500        
+// console.log(first)
+// console.log(secnd)
+
+        // IIFE
+
+//         // immediately invoked function 
+// 'use strict';
+//         (function(){
+//             console.log('IIFE')
+//         })();
+
+        // higher order functions
+
+        // function FirstValue()
+        // {
+        //     console.log("1st Value")
+        // }
+        // function ScondTerm()
+        // {
+        //     console.log('2nd value')
+        // }
+        // ScondTerm(FirstValue());
+        // ScondTerm(FirstValue());//In these SCondterm is the highorderfunction and FirstValue() is the call backfunction
+          
+        // this keyword
+
+        // it will point out of the current object
+        // function doSomething() {
+        //         console.log(this);
+        //         }
+                        
+        //         doSomething();
+        // console.log(this)
+        var mOBj={
+            firstObj:'rrrrr',
+            SecondObj:'yyyyy',
+            ObjeTS:function()
+            {
+                console.log(this.firstObj)
+            }
+           
+        }
+        mOBj.ObjeTS()
+
+
+        
+        // var obj = {
+        //     name:  "vivek",
+        //     getName: function(){
+        //         console.log(this.name);
+        //     }
+            
+        // }
+        
+        // var getName = obj.getName;
+        // var obj2 = {name:"akshay", getName };
+        // obj2.getName();
+
+// call and apply vs bind
+
+                //     var myCall={    
+
+                //         Name:"raghavendra",
+                //         Correct:'yes',
+                //         myFunc:function(thankYOu,Sefjasl){
+                //             return this.Name+thankYOu+Sefjasl
+                //         }
+                //     }
+                //     var myFig={Name:'hello'}
+                //     // myCall.myFunc()
+                // console.log(myCall.myFunc.call(myFig,' world ',['  what is what']));
+                //     // console.log(myCall.myFunc.apply(myFig,['nature'],['akddjffj']));
+                
+                //     // var creativeiye=myCall.myFunc.bind(myFig,'raghavendra',['rajesh'])
+                //     //     console.log(creativeiye());
+
+// currying function in javascript?
+
+// function myCre(a)
+// {
+//     return function(b)
+//     {
+//         return function(c)
+//         {
+//             return a+b+c
+//         }
+//     }
+// }
+// myCre(3)(4)(3)
+// console.log(myCre(3)(4)(3))
+        
+
+// global scope
+
+// var ee=0
+// function jdf(){
+    
+//     for(var i=0;ee<10;ee++)
+//     {
+//         console.log(ee)
+//     }
+   
+// }
+// jdf();   
+// console.log('yes')  
+
+
+// // functional scope?
+// function jad()
+// {
+//     var myWOl='string'
+//     console.log(myWOl)
+// }
+// jad()
+
+// //block scope
+// var kf=1000;
+//     if(kf===1000)
+//     {   
+//         console.log('so great')
+//     }
+
+// scope chain
+
+            // var scope='first'
+            // console.log(scope)
+            // function color()
+            // {
+            //     if(true)
+            //     {   
+            //         var scope='second'
+            //         console.log(scope)
+            //     }
+            //     if(true)
+            //     {   
+            //         var scope='third'
+            //         console.log(scope)
+            //     }
+            // }
+            // color()
+
+    // closure()
+                
+            function name(){
+                // let mydjf={
+                //     real:'ragh',
+                //     dup:'chang'
+                // }
+            let count=0;
+                // console.log(count)
+                function secon(){
+                
+                // return mydjf.real='raghavendra'
+                    return count+=1
+                }   
+                return secon;
+            }
+            
+            var mV=name()
+           console.log(mV())
+           console.log(mV())
+           console.log(mV())
+           console.log(mV())
+           console.log(mV())
+                var EValute=100;
+                var secondCe=500;
+                 var sum=eval(EValute+secondCe)
+                    console.log(sum)
+     
+// Prototype
+// A Prototype is blue print of an object .
+//That prototype  allows to use the properties and methods.
+//even if properties and method do not exist in current on an object
+            // function Details(first,last,email)
+            // {
+            //     this.firstName=first;
+            //     this.secondName=last;
+            //     this.email=email;
+            // }
+            // var myD=new Details('raghava','yallamanda','styleraghava@gmail.com')
+            // console.log(myD)
+            // console.log(myD.Prototype)
+
+        // memoization 
+        
+        // function myDD()
+        // {
+            
+        //     return function color(FirstNUm,SeconNum)
+        //     {   
+        //         return FirstNUm+SeconNum;
+        //     }
+        //     return color;
+        // }
+        // var yy=myDD()
+        // // console.log(myDD(20,30))
+        // console.log(yy(20,30))
+            
+        // function recursion(a,b)
+        // {      
+        //     var a=10
+        //     if(a=10)
+        //     {
+               
+        //         console.log(a)
+        //     }
+        //     // recursion();
+          
+        // }
+        // recursion()
+
+        // arrow function 
+
+                        var obj1 = {
+                valueOfThis: function(){
+                    return this;
+                }
+            }
+                    var obj2 = {
+                    valueOfThis: ()=>{
+                        return this;
+                    }
+            }
+         console.log(obj1.valueOfThis()); // Will return the object obj1
+           console.log(obj2.valueOfThis()); // Will return window/global object
+
+
+    </script>
+</body>
+</html>

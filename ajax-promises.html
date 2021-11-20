@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//  const p = new Promise((resolve, reject) => {
+//   let a = 1 + 3;
+//   if (a == 2)
+//   {
+//     resolve("You get the data successfully");
+//   } else 
+//   {
+//     reject("Some Error Occured");
+//   }
+// });
+// console.dir(p);
+// p.then((message) => console.log("resolve state" + message)).catch((err) =>
+//   console.log("Catch Method" + err)
+// );
+// fetch("http://jsonplaceholder.typicode.com/users")
+//   .then((data) => {
+//     data.json().then((response) => console.log(response));
+//   })
+//   .catch((err) => {
+//     console.log("Error Occured", err);
+//   });
+
+//first step:
+let a = new Promise ((resolve ,reject)=>{
+    let b=2+3;
+    
+    if(b==5){
+        resolve('this is correct value');
+    }
+    else
+    {
+        reject('this is not correct value');
+    }
+});
+console.log(a);
+
+//second step:
+a.then((message) => console.log('laptop'+ messsage))
+ .catch((err) => console.log('this is error'+err));
+
+//third step;
+fetch("http://jsonplaceholder.typicode.com/users")
+.then(function(e)
+{
+     e.json()
+     .then(function(f)
+     {
+        console.log(f)
+     });
+})
+.catch(function(err){
+    console.log('error is occuring',err);
+});
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const myProducts=[
+        {
+            id:139,
+            name:'raghava',
+            price:2000,
+        },
+        {
+            id:140,
+            name:'rajesh',
+            price:3000,
+        },
+        {
+            id:141,
+            name:'naresh',
+            price:4000,
+        },
+        {
+            id:142,
+            name:'dinesh',
+            price:5000,
+        },
+        {
+            id:143,
+            name:'mahesh',
+            price:2000,
+        },
+
+    ];
+
+    const z= myProducts.filter((product)=>{
+
+        return product.price >3000;
+       
+    });
+    console.log(z);
+</script>
+</html>

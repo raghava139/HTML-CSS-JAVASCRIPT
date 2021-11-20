@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting, setTimeOut,setInterval</title>
+</head>
+<body>
+
+    <h1 id='Counting'>
+       
+    </h1>
+        <script>
+            
+            // hoisting:
+            //  you can access the calling the function declaration or variables before it declaration
+
+            x();
+            document.write(y)
+            function x()
+            {
+                document.write('this is hoisting')
+            }
+            var y=10;
+
+            // hoisting---how it works?
+
+            // conText: 
+            // everyThing wiil execute inside the context
+
+
+            // In these context having two types of contexts
+            // 1.Global context
+            // 2.Execution context
+
+            // 1. Global contexT
+
+            // it is a big box 
+            // it will store all the variables and assign undefined //and it is not useful in function scope
+            // it will scan all the function declaration and made available
+           
+           
+            // it has some difference in functon declaration and function expression
+            // In hoisting we can use only function declaration only 
+            //not function expression...otherWise it will thrown an error
+            
+            //function declaration
+            hello();
+            function  hello()
+            {
+                console.log('declaration')
+            }
+           
+           
+            //It will thrown an error in function expression
+           
+           
+            // Expres();
+            // var Expres=function mainHero()
+            // {
+            //     console.log('expression ')
+            // }
+
+            
+            
+            // //when you delcare the var inside the function and outside the console it will thrown an error
+            // laptop()
+            // console.log(z)
+            // function laptop()
+            // {
+            //     var z=10
+            // }
+           
+
+            // setTimeout
+
+        //  setTimeout(function()
+        //     {
+        //         alert('time is out')
+        //     },5000)
+            
+            //setInterval
+          var Counting=document.getElementById("Counting")
+            let count=0;
+          setInterval(()=>{
+            if(count<=5000)
+            {
+                Counting.innerHTML='count:'+count
+                count++;
+                
+            }
+            else{
+                clearInterval()
+            }
+          },1)    
+
+
+
+
+        </script>
+</body>
+</html>

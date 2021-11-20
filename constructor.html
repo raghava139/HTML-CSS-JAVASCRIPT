@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Parent{
+        height=500;
+        width=300;
+        constructor(height,width){
+            this.height=height;
+            this.width=width;
+
+        }
+        calculateTheArea(){
+            return this.height * this.width;
+        }
+    }
+     
+    const obj = new Parent (200,200);
+    // console.log(obj);
+    // console.log(obj.height);
+    console.log(obj.calculateTheArea());
+
+    const obj2 = new Parent (500,400);
+    console.log(obj2.calculateTheArea());
+
+
+class Child extends Parent {
+
+    constructor(height,width,radius){
+        super(height,width);
+        this.radius=radius;
+    }
+        getTheCircleArea(){
+            
+            return 2 * Math.PI * this.radius;
+        }
+}
+const C = new Child(10,20,30);
+console.log(C);
+console.log(C.getTheCircleArea());
+
+</script>
+</html>

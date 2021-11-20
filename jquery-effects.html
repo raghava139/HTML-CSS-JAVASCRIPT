@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>effects</title>
+
+    <style>
+        .firstdiv{
+           background-color:grey;
+           border:2px solid blue;
+           color:white;
+        }
+        span{
+            border:3px solid tomato;
+        }
+    </style>
+</head>
+<body>
+    <h1>companies</h1>
+<div class='firstdiv'>
+    <p>this is my hp laptop</p>
+<p>this is my dell laptop</p>
+<p>this is my lenovo laptop</p>
+<p>this is my windows laptop</p>
+<p>this is my apple laptop</p>
+</div>
+
+<div> this is my div element</div><br>
+
+<span>this is 1st span</span><br>
+<span>this is 2nd span</span><br>
+<span>this is 3rd span</span><br>
+<span>this is 4th span</span><br>
+<span>this is 5th span</span><br>
+<span>this is 6th span</span><br>
+
+<br><br>
+
+
+<input type='submit' id='button' value='hide'>
+<input type='submit' id='but' value='show'>
+<input type='submit' id='tbut' value='toggle'>
+
+<br><br>
+
+<input type='submit' id='fadeout' value='fadeout'>
+<input type='submit' id='fadein' value='fadein'>
+<input type='submit' id='fadetoggle' value='fadetoggle'>
+<input type='submit' id='fadeto' value='fadeto'>
+
+<br> <br>
+<input type='submit' id='slideup' value='slideup'>
+<input type='submit' id='slidedown' value='slidedown'>
+<input type='submit' id='slidetoggle' value='slidetoggle'>
+
+<br> <br>
+<input type='submit' class='ani'value='animate'>
+<input type='submit' class='fstop' value='fstop'>
+<input type='submit' class='sstop' value='sstop'>
+<input type='submit' class='tstop' value='tstop'>
+
+<br>
+<span class='element'id='idea'>this is my span element and it is inline element</span>
+<input type='submit' class='chain' value='chaining'>
+
+<p id='txt'>this is my text content</p>
+<input type='submit' class='word' value='text'>
+
+<p id='ml'>this is my <b>html</b> content</p>
+<input type='submit' class='tword' value='html'>
+
+get value:<input type='text' class='svalue'>
+<input type='submit' class='sword' value='value'>
+
+<h1>set the text,html,val</h1>
+
+<h1 class='newtext'></h1>
+<input type='submit'class='nbtn' value='settext'>
+
+
+<h2 class='newdiv'> </h2>
+<input type='submit'class='sbtn' value='sethtml'>
+<br>
+set value:<input type='text' class='sval'>
+<input type='submit' class='swo' value='value'>
+
+<h1 class='sattr'>this is my set attribute</h1>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+
+
+
+// effects
+// 1.hide ,show,toggle effects
+// 2.fading methods
+// 3.sliding methods
+// 4.animate methods
+// 5.method chaining
+
+// 1.hide ,show,toggle effects
+// syntax:   $('selector').hide('duration',function);
+
+$(document).ready(function(){
+
+    $('#button').click(function(){
+        $('p').hide('1000');
+    });
+});
+
+$("#but").click(function(){
+    $('p').show('1000');
+});
+
+$('#tbut').click(function(){
+    $('p').toggle('3000')
+});
+
+// 2.fading methods
+//----fadeIn
+//----fadeOut
+//----fadeToggle
+//----fadeTo
+
+// fadeIn, fadeOUt,fadeToggle----syntax:   $('selector').fadeIn('duration',function);
+//fadeTo-----syntax: $('selector').fadeTo('duariton',opacity,function);
+//fadeTo is having 3 parameters........
+
+$(document).ready(function(){
+    $('#fadeout').click(function(){
+
+        $('p').fadeOut('2000');
+
+    });
+});
+
+$("#fadein").click(function(){
+    $('p').fadeIn('6000');
+});
+
+$('#fadetoggle').click(function(){
+    $('p').fadeToggle('4000');
+});
+
+$('#fadeto').click(function(){
+    $('p').fadeTo('3000',0.3,function(){
+        $('h1').hide('2000');
+    });
+});
+
+
+//sliding effects
+//slideUp
+//slideDown
+//slideToggle
+
+$(document).click(function(){
+    $('#slideup').click(function(){
+        $('p').slideUp('2000');s
+    });
+
+});
+
+$('#slidedown').click(function(){
+        $('p').slideDown('2000');
+    });
+
+
+$('#slidetoggle').click(function(){
+    $('p').slideToggle('2000');
+});
+
+//animate methods 
+//animate method having the 3 parameters
+
+//animate
+//stop()
+//stop(true)
+//stop(true,true)
+
+//animate ---syntax:  $('selector').animate({styles},duration,easing,function)
+// easing---linear,swing.
+
+$(document).ready(function(){
+    $('.ani').click(function(){
+        
+        
+        $('span').animate({fontSize:"20px"},5000,);
+        $('span').animate({marginLeft:"100px"},5000,);
+        $('span').animate({fontSize:"0px"},5000,);
+          
+    });
+});
+//stop()
+// this stop() will be current line is fastwork and go to the next line.
+    $('.fstop').click(function(){
+    $('span').stop();
+    });
+
+    
+//stop(true)
+//pause and play
+    $('.sstop').click(function(){
+        $('span').stop(true);
+    });
+
+
+//stop(true,true)
+//this stop(true,true) will be current line is stop and go to the next line.
+    $('.tstop').click(function(){
+        $('span').stop(true,true);
+    });
+
+//Method chaining
+//using more methods using only one selector
+$('.chain').click(function(){
+    $('.element').css('color','white')
+            .css('background-color','green')
+            .hide(1000)
+            .show(1000)
+            .css('background-color','blue')
+            .css('fontSize','40px');
+});
+
+//Get content
+//text()
+//html()
+//val()
+
+//text()
+
+$('.word').click(function()
+{
+    alert($('#txt').text());
+
+});
+//html()
+
+$('.tword').click(function()
+{
+    alert($('#ml').html());
+
+});
+
+//val()
+$('.sword').click(function()
+{
+    alert($('.svalue').val());
+
+});
+
+
+// set the text(),html(),val()
+
+//text() 
+$('.nbtn').click(function(){
+
+    $('.newtext').text('this is heading text');
+});
+
+//html()
+$('.sbtn').click(function(){
+   
+    $('.newdiv').html('this is my html method')
+
+
+});
+//val()
+$('.swo').click(function(){
+    $('.sval').val('this is setting my value');
+
+});
+//attributes
+//get attribute 
+//set attribute
+
+//get attribute
+
+// alert($('#idea').attr('class'));
+// alert($('.swo').attr('type'));
+
+//set attribute
+
+$('.sattr').attr('id','idatt');
+$('#idatt').css('color','red');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

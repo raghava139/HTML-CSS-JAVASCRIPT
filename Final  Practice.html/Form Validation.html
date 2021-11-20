@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-validation</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <style>
+     
+      
+     @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Telex&family=Zen+Kurenaido&display=swap');
+            body
+            {
+                background-color:crimson;
+                font-family:Telex;
+          
+                
+            }
+            .formDiv
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height:700px;
+            
+               
+            }
+            .myDiv
+            {
+                background-color: white;
+                padding:35px;
+                box-shadow: 1px 1px 10px 15px rgba(1, 0, 0, 0.3);
+               
+                position: relative;
+          
+            }
+            h1
+            {
+                /* background-color:gray; */
+                text-align: center;
+                font-weight:bold;
+                color:black;
+                display: block;
+                /* padding:20px; */
+                /* box-shadow: 1px 1px 10px 5px rgba(1, 0, 0, 0.3); */
+                width:100%;
+            }
+            form label
+            {
+                display:inline-block;
+                font-size: 20px;
+            }
+            form input
+            {
+                display: block;
+                padding:5px;
+                width:100%;
+                outline-color:red;
+            }
+            .ourDiv .fa-check-circle
+            {
+              color: green;
+              position:absolute;
+              top: 30%;
+              right:2px;
+              visibility: hidden;
+             
+            }
+            .ourDiv .fa-exclamation-circle
+            {
+              color: red;
+              position:absolute;
+              top: 30%;
+              right:2px;
+              visibility: hidden;
+             
+            }
+            small 
+            {
+                color:red;
+                visibility: hidden;
+            }
+            button
+            {
+                width:100%;
+                background-color: grey;
+                border:none;
+                padding:8px;
+                font-size:30px;
+                color:black;
+                font-weight:bold;
+                box-shadow: 1px 1px 4px 2px rgba(1, 0, 0, 0.3);
+            }
+            .ourDiv .fa-exclamation-circle
+            {
+                border-color:red;
+                outline-color: red;
+                /* visibility: visible; */
+            }
+            .ourDiv .fa-check-circle
+            {
+                border-color:green;
+                outline-color: green;
+                color:green;
+                /* visibility: visible; */
+            }
+            .myDiv i
+            {
+                border-color:red;
+                outline-color: red;
+                visibility: visible;
+            }
+       
+            
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class='formDiv'>
+            
+            <form class='myDiv ' id='myDiv'onsubmit=myfunc()>
+                <h1 class='myHeading'> Create Account</h1>
+                <div class='ourDiv'>
+                    
+                    <label>
+                        username
+                    </label>
+                    <input type='text'placeholder='Enter Your Username'id='myText'/>
+                    <i class="fa fa-check-circle " ></i>
+                    <i class="fa fa-exclamation-circle " ></i>
+                    <small>Error Message</small>
+                </div>
+               
+
+                <div class='ourDiv'>
+                    <label>
+                        Email
+                    </label>
+                    <input type='email'placeholder='Enter Your Email'/>
+                    <i class="fa fa-check-circle " ></i>
+                    <i class="fa fa-exclamation-circle " ></i>
+                    <small>Error Message</small>
+                </div>
+                <div class='ourDiv'>
+                    <label>
+                        Password
+                    </label>
+                    <input type='password' placeholder='Enter Your Password'/>
+                    <i class="fa fa-check-circle " ></i>
+                    <i class="fa fa-exclamation-circle " ></i>
+                    <small>Error Message</small>
+                </div>
+                <div class='ourDiv'>
+                    <label>
+                        Re-Enter Password
+                    </label>
+                    <input type='password'placeholder='Re-Enter Your Password'/>
+                    <i class="fa fa-check-circle " ></i>
+                    <i class="fa fa-exclamation-circle " ></i>
+                    <small>Error Message</small>
+                </div>
+                <button type='submit'>submit</button>
+                </form>
+        </div>
+    </div>
+
+    <script>
+                function myfunc(){
+
+                    var myText= document.getElementById("myText").value
+
+                    if(myText=="")
+                    {
+                        alert('hello')
+                        return false;
+                    }
+                }
+    </script>
+</body>
+</html>
